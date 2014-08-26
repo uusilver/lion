@@ -19,6 +19,7 @@
 <!-- //      Javascript Files        // -->
 <!-- ////////////////////////////////// -->
 <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.js"></script>
 <script type="text/javascript" src="js/hoverIntent.js"></script> 
 <script type="text/javascript" src="js/superfish.js"></script> 
 <script type="text/javascript" src="js/supersubs.js"></script>
@@ -35,6 +36,9 @@ jQuery(document).ready(function(){
 					 // containing tabs for same reason. 
 					 
 });
+	$("img").lazyload({
+	    effect : "fadeIn"
+	});
 </script>
 </head>
 <body>
