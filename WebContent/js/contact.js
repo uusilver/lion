@@ -13,48 +13,31 @@ jQuery(function() {
     }
 	
 	
-	  var email = jQuery("input#email").val();
-	  if (email == "") {
-      jQuery("span#email_error").show();
-      jQuery("input#email").focus();
+	  var telno = jQuery("input#telno").val();
+	  if (telno == "") {
+      jQuery("span#telno_error").show();
+      jQuery("input#telno").focus();
       return false;
     }
 	
-	var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-	if(!emailReg.test(email)) {
-	jQuery("span#email_error2").show();
-    jQuery("input#email").focus();
+	var emailReg = /^1\d{10}$/;
+	if(!emailReg.test(telno)) {
+	jQuery("span#telno_error2").show();
+    jQuery("input#telno").focus();
       return false;
 	}
 	
-	var subject = jQuery("input#subject").val();
 	
 	
-	  var msg = jQuery("textarea#msg").val();
-	  if (msg == "") {
-	  jQuery("span#msg_error").show();
-	  jQuery("textarea#msg").focus();
+	  var account = jQuery("input#account").val();
+	  if (account == "") {
+	  jQuery("span#account_error").show();
+	  jQuery("input#account").focus();
 	  return false;
     }
 		
-		var dataString = 'name='+ name + '&email=' + email + '&subject=' + subject + '&msg=' + msg;
-		//alert (dataString);return false;
 		
-	  jQuery.ajax({
-      type: "POST",
-      url: "process.php",
-      data: dataString,
-      success: function() {
-        jQuery('#contactform').html("<div id='message'></div>");
-        jQuery('#message').html("<strong>Contact Form Submitted!</strong>")
-        .append("<p>We will be in touch soon.</p>")
-        .hide()
-        .fadeIn(1500, function() {
-          jQuery('#message');
-        });
-      }
-     });
-    return false;
+	$("#contact").submit();  
 	});
 });
 

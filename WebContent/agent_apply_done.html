@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" href="images/favicon.ico" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title></title>
+<!-- ////////////////////////////////// -->
+<!-- //      Start Stylesheets       // -->
+<!-- ////////////////////////////////// -->
+<link href="styles/style.css" rel="stylesheet" type="text/css" />
+<link href="styles/inner.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]>
+<link href="styles/ie8.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!-- ////////////////////////////////// -->
+<!-- //      Javascript Files        // -->
+<!-- ////////////////////////////////// -->
+<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	//Menu
+	var url = window.location.href;
+	var agentCode = url.split("?")[1].split("=")[1];
+	$("#ageCode").append("您的推广码是:"+agentCode);				 
+});
+</script>
+</head>
+<body>
+
+<div id="outer-container">
+	<div id="container">
+    	
+        <div id="header" class="innerpage">
+        	<div class="shadow"></div>
+        	<div class="container940">
+        		<h1 class="pagetitle">恭喜，您成功申请到推广码!</h1>
+                <div class="pagedesc"></div>
+                <div class="clear"></div><!-- clear float -->
+            </div><!-- end container940 -->
+        </div><!-- end #header -->
+        
+        
+		<div id="content" class="withsidebar">
+        	<div id="main">
+            	<div id="maincontent">
+                    <h2 class="title_pattern uppercase"><span id="ageCode" class="colortext"></span></h2>
+                    <p>将推广码附在产品的购买信息上，推广员将会获得丰厚返利！ <h2><span class="colortext">最高返利10%</span></h2>  </p>
+                    
+                    <div class="separator line"></div>
+                    
+                     <div class="clear"></div><!-- clear float -->
+                </div><!-- end #maincontent -->
+                <div id="sidebar">
+                	<ul>
+                    	<li class="widget-container">
+                        	<h2 class="widget-title">联系我们</h2>
+                            <div class="textwidget">
+                           <p> 江苏省南京市太平南路<br/>
+                            200号</p>
+                            <p>
+                                                                                                  电话: +62 500 800 123<br/>
+                          	传真: +62 500 800 112<br/>
+                                                                                                 电子邮件: <a href="mailto:testmail@yourdomain.com" class="colortext">testmail@yourdomain.com</a><br/>
+                                                                                                 网址: <a href="http://www.templatesquare.com" class="colortext">www.templatesquare.com</a><br/>
+                            </p>
+                            </div>
+                        </li>
+                    	
+                    </ul>
+                </div><!-- end #sidebar -->
+                
+                <div class="clear"></div><!-- clear float -->
+            </div><!-- end #main -->
+		</div><!-- end #content -->
+        
+		
+        
+        <div id="after-footer">
+        	<div class="container940">
+                <div id="sn">
+                	<ul>
+                    	<li><a href="#"><img src="images/icons/fb.png" alt="" /></a></li>
+                        <li><a href="#"><img src="images/icons/stumbleupon.png" alt="" /></a></li>
+                        <li><a href="#"><img src="images/icons/lastfm.png" alt="" /></a></li>
+                        <li><a href="#"><img src="images/icons/twitter.png" alt="" /></a></li>
+                        <li><a href="#"><img src="images/icons/youtube.png" alt="" /></a></li>
+                    </ul>
+                </div>
+                <div id="footertext">
+                    Copyright &copy;2014 Mind-T.  All Rights Reserved.
+                </div>
+               <div class="clear"></div><!-- clear float -->
+            </div><!-- end container940 -->
+        </div><!-- end #after-footer -->
+        
+	</div><!-- end #container -->
+</div><!-- end #outer-container -->
+		
+</body>
+</html>

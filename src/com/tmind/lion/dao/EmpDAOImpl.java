@@ -15,7 +15,7 @@ public class EmpDAOImpl extends JdbcDaoSupport implements EmpDAO {
 	public void save(Emp emp) throws Exception {
 		// TODO Auto-generated method stub
 		String sql ="insert into emp (name, passwor, email, birthday, info) values(?,?,?,?,?)";
-		Object args[] = {emp.getName(),emp.getPassword(),emp.getEmail(),emp.getBirthday(),emp.getInfo()};  
+		Object args[] = {emp.getName(),emp.getPassword(),emp.getEmail(),emp.getBirthday(),emp.getInfo()}; 
 		this.getJdbcTemplate().update(sql, args);
 
 	}
