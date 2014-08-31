@@ -405,7 +405,7 @@ li.sfHover ul li:first-child a{background-image:url(../images/arrow_menu.gif); b
 #content{}
 #content.withsidebar{background:url(../images/bg-content-inner.gif) repeat-y;}
 #main{padding:40px;}
-#maincontent{float:left; width:610px; padding-right:25px;}
+#maincontent{float:left; width:610px; height:100%; padding-right:25px;}
 
 /*** CONTENT EMEMENT ***/
 .container940{width:940px; margin:0 auto;}

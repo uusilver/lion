@@ -20,6 +20,8 @@
     <servlet-class>com.tmind.lion.biz.RetreiveAgentCode</servlet-class>
   </servlet>
   
+  
+  
   <servlet-mapping>
     <servlet-name>RetreiveAgentCode</servlet-name>
     <url-pattern>/RetreiveAgentCode</url-pattern>
@@ -38,22 +40,4 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
-	
-	<!-- 缓存、gzip压缩核心过滤器 -->
-	<filter>
-	    <filter-name>PageEhCacheFilter</filter-name>
-	    <filter-class>com.tmind.lion.cache.PageEhCacheFilter</filter-class>
-	    <init-param>
-	        <param-name>patterns</param-name>
-	        <param-value>*.*</param-value>
-	    </init-param>
-	</filter>
-	<filter-mapping>
-	    <filter-name>PageEhCacheFilter</filter-name>
-	    <url-pattern>*.action</url-pattern>
-	</filter-mapping>
-	<filter-mapping>
-	    <filter-name>PageEhCacheFilter</filter-name>
-	    <url-pattern>*.*</url-pattern>
-	</filter-mapping>
 </web-app>

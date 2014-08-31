@@ -60,20 +60,20 @@ public class RetreiveAgentCode extends HttpServlet{
 	            			ps.setString(2, agentCode);
 	            			ps.executeUpdate();
 	            		}
-	            		
 	            		sql = "UPDATE m_agent_code SET AGENT_ACCOUNT=?, AGENT_ACCOUNT_TYPE=? where AGENT_CODE=?";
 	            		ps=conn.prepareStatement(sql);
 	            		ps.setString(1, account);
 	            		ps.setString(2, "支付宝");
 	            		ps.setString(3, agentCode);
 	            		ps.executeUpdate();
+	            		resp.sendRedirect("agent_apply_done.html?agentCode="+agentCode);
             		}catch(Exception e){
             			System.out.println(e.getMessage());
             			//return "系统错误，请稍后再试!";
             		}finally{
             			DBUtils.free(conn, ps, rs);
             		}
-            		resp.sendRedirect("agent_apply_done.html?agentCode=agent_apply_done.html?agentCode="+agentCode);
+            		
             		
             	}//绑定支付宝或者财付通账号
 

@@ -10,11 +10,23 @@
     http://www.springframework.org/schema/aop   
     http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">  
     <!-- DataSource -->  
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">  
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>  
-        <property name="url" value="jdbc:mysql://localhost:3306/lion?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>  
-        <property name="username" value="root"/>  
-        <property name="password" value="1234"/>  
+      
+	        <property name="url" value="jdbc:mysql://localhost:3306/yyyyf?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>
+	        <property name="username" value="root"/>  
+	        <property name="password" value="1234"/>  
+        
+           <!-- ||
+      	    <property name="url" value="jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_yyyyf"/>
+	        <property name="username" value="z32w1x4nz2"/>  
+	        <property name="password" value="lh3x4yjkwy0lzhm33zim023h1lh42m550iii1y1i"/>  
+	      ||-->
+	      
+	      <property name="maxActive"><value>255</value></property>   
+          <property name="maxIdle"><value>2</value></property>
+          <property name="maxWait"><value>120000</value></property>          
+             
     </bean>  
     <!-- DAO -->  
     <bean id="empDAO" class="com.tmind.lion.dao.EmpDAOImpl">  
