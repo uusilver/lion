@@ -6,12 +6,13 @@
 <meta name="robots" content="index, follow" />
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<title>Magnum</title>
+<title>悠悠银艺坊-在线商城</title>
 <!-- ////////////////////////////////// -->
 <!-- //      Start Stylesheets       // -->
 <!-- ////////////////////////////////// -->
 <link href="styles/style.css" rel="stylesheet" type="text/css" />
 <link href="styles/inner.css" rel="stylesheet" type="text/css" />
+<link href="styles/showLoading.css" rel="stylesheet" type="text/css" />
 <!--[if lt IE 9]>
 <link href="styles/ie8.css" rel="stylesheet" type="text/css" />
 <![endif]-->
@@ -23,23 +24,8 @@
 <script type="text/javascript" src="js/hoverIntent.js"></script> 
 <script type="text/javascript" src="js/superfish.js"></script> 
 <script type="text/javascript" src="js/supersubs.js"></script>
-<script type="text/javascript">
-jQuery(document).ready(function(){
-	//Menu
-	jQuery("ul.sf-menu").supersubs({ 
-	minWidth		: 12,		// requires em unit.
-	maxWidth		: 27,		// requires em unit.
-	extraWidth		: 3	// extra width can ensure lines don't sometimes turn over due to slight browser differences in how they round-off values
-						   // due to slight rounding differences and font-family 
-	}).superfish();  // call supersubs first, then superfish, so that subs are 
-					 // not display:none when measuring. Call before initialising 
-					 // containing tabs for same reason. 
-					 
-});
-	$("img").lazyload({
-	    effect : "fadeIn"
-	});
-</script>
+<script type="text/javascript" src="js/jquery.showLoading.min.js"></script>
+<script type="text/javascript" src="js/product.js"></script>
 </head>
 <body>
 
@@ -95,8 +81,9 @@ jQuery(document).ready(function(){
                             </div>
                             <div class="ts-display-product-text">
                             <h2 class="colortext">Toshiba Laptop 24’</h2>
-                            <span class="productprice">$ 870.00</span>
-                            <a href="single-product.html" class="button">Add to Cart</a>
+                            <span class="productprice">870.00</span>
+                            <a style="cursor:pointer" class="cartbutton">加入购物车</a>
+                            <a style="cursor:pointer" class="buybutton">直接购买</a>
                             </div>
                         </li>
                         <li>
@@ -106,7 +93,8 @@ jQuery(document).ready(function(){
                             <div class="ts-display-product-text">
                             <h2 class="colortext">Keyboard Vista</h2>
                             <span class="productprice">$ 150.00</span>
-                            <a href="single-product.html" class="button">Add to Cart</a>
+                            <a style="cursor:pointer" class="cartbutton">加入购物车</a>
+                            <a style="cursor:pointer" class="buybutton">直接购买</a>
                             </div>
                         </li>
                         <li class="nomargin">
@@ -116,7 +104,8 @@ jQuery(document).ready(function(){
                             <div class="ts-display-product-text">
                             <h2 class="colortext">Scanner and Printer</h2>
                             <span class="productprice">$ 270.00</span>
-                            <a href="single-product.html" class="button">Add to Cart</a>
+                            <a style="cursor:pointer" class="cartbutton">加入购物车</a>
+                            <a style="cursor:pointer" class="buybutton">直接购买</a>
                             </div>
                         </li>
                         <li>
@@ -126,7 +115,8 @@ jQuery(document).ready(function(){
                             <div class="ts-display-product-text">
                             <h2 class="colortext">HD - Apple</h2>
                             <span class="productprice">$ 470.00</span>
-                            <a href="single-product.html" class="button">Add to Cart</a>
+                            <a style="cursor:pointer" class="cartbutton">加入购物车</a>
+                            <a style="cursor:pointer" class="buybutton">直接购买</a>
                             </div>
                         </li>
                         <li>
@@ -136,7 +126,8 @@ jQuery(document).ready(function(){
                             <div class="ts-display-product-text">
                             <h2 class="colortext">iPad- Apple</h2>
                             <span class="productprice">$ 500.00</span>
-                            <a href="single-product.html" class="button">Add to Cart</a>
+                            <a style="cursor:pointer" class="cartbutton">加入购物车</a>
+                            <a style="cursor:pointer" class="buybutton">直接购买</a>
                             </div>
                         </li>
                         <li class="nomargin">
@@ -146,7 +137,8 @@ jQuery(document).ready(function(){
                             <div class="ts-display-product-text">
                             <h2 class="colortext">Nokia N8</h2>
                             <span class="productprice">$ 550.00</span>
-                            <a href="single-product.html" class="button">Add to Cart</a>
+                            <a style="cursor:pointer" class="cartbutton">加入购物车</a>
+                            <a style="cursor:pointer" class="buybutton">直接购买</a>
                             </div>
                         </li>
                         <li>
@@ -156,7 +148,8 @@ jQuery(document).ready(function(){
                             <div class="ts-display-product-text">
                             <h2 class="colortext">Mouse Track</h2>
                             <span class="productprice">$ 9.00</span>
-                            <a href="single-product.html" class="button">Add to Cart</a>
+                            <a style="cursor:pointer" class="cartbutton">加入购物车</a>
+                            <a style="cursor:pointer" class="buybutton">直接购买</a>
                             </div>
                         </li>
                         <li>
@@ -166,7 +159,8 @@ jQuery(document).ready(function(){
                             <div class="ts-display-product-text">
                             <h2 class="colortext">Headphone - Sony</h2>
                             <span class="productprice">$ 11.00</span>
-                            <a href="single-product.html" class="button">Add to Cart</a>
+                            <a style="cursor:pointer" class="cartbutton">加入购物车</a>
+                            <a style="cursor:pointer" class="buybutton">直接购买</a>
                             </div>
                         </li>
                         <li class="nomargin">
@@ -176,7 +170,8 @@ jQuery(document).ready(function(){
                             <div class="ts-display-product-text">
                             <h2 class="colortext">PSP 3D - Sony</h2>
                             <span class="productprice">$ 300.00</span>
-                            <a href="single-product.html" class="button">Add to Cart</a>
+                            <a style="cursor:pointer" class="cartbutton">加入购物车</a>
+                            <a style="cursor:pointer" class="buybutton">直接购买</a>
                             </div>
                         </li>
                      </ul>

@@ -469,7 +469,9 @@ select {
 }
 
 
-.button,
+.cartbutton,
+.buybutton,
+.removebutton,
 .button:visited,
 input[type="submit"],
 input[type="reset"],
