@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, h6{ font-weight:normal; font-family:'Ubuntu',  Arial; color:
 .uppercase{text-transform:uppercase;}
 .title_pattern{ background:url(../images/pattern_title.gif) repeat-x left center; font-size:16px; text-align:center}
 .title_pattern span{ background:#fff; padding:0 20px}
-.pagetitle{font-size:20px; color:#f6f6f6; margin:0; text-transform:uppercase}
+.pagetitle{font-size:20px; color:#ffffff; margin:0; text-transform:uppercase}
 
 /* links */
 a, a:visited {text-decoration:none; font-weight:normal; color:#dc6a4d }

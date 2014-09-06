@@ -5,6 +5,7 @@ jQuery(function() {
 		// first hide any error messages
     jQuery('.error').hide();
 		
+   alert("in!!!");
 	  var name = jQuery("input#name").val();
 		if (name == "") {
       jQuery("span#name_error").show();
@@ -32,8 +33,10 @@ jQuery(function() {
 	if(!emailReg.test(telno)) {
 	jQuery("span#telno_error2").show();
     jQuery("input#telno").focus();
+    alert("call 1");
       return false;
 	}else{
+		  alert("call validate");
 		  valiDateTelno(telno);
 	 }
 	
@@ -43,6 +46,7 @@ jQuery(function() {
 });
 
 function valiDateTelno(telno) {
+	alert("call!");
 	$.ajax( {
 		type : "get",
 		async:false,

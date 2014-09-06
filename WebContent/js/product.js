@@ -16,19 +16,41 @@ jQuery(document).ready(function(){
 	//判断COOKIE是否存在
 	var cookie = document.cookie;
 	if(cookie.length==0){
-		alert("浏览器禁用的cookie,将会影响购物车使用!");
+		//alert("浏览器禁用的cookie,将会影响购物车使用!");
 	}
-	
+	//
+	freshCartNum();
 	
 	//显示遮盖层				 
 	//$("#content").showLoading();	
 	
 	$(".cartbutton").click(function(){
+		
 		var price = $(this).parent().find(".productprice").html();
 		var name  = $(this).parent().find(".colortext").html();
 		var imgUrl = $(this).parent().parent().find("img").attr("src");
 		var count = 1;
 		//alert(imgUrl);
+		
+		//飞入效果
+		var cartEle = $(this).parent().parent().find("img").clone().css('opacity','0.7').addClass("cartItemCopy");
+		cartEle.css({
+			'z-index': 9000,
+			'display': 'block',
+			'position': 'absolute',
+			'top': $('.cartItem').offset().top +'px',
+			'left': $('.cartItem').offset().left +'px',
+			'width': $('.cartItem').width() +'px',
+			'height': $('.cartItem').height() +'px'
+		});
+		$('body').append(cartEle);
+		cartEle.animate({
+			top:$('#shoppingcartwidget').offset().top,
+			left:$('#shoppingcartwidget').offset().left,
+			width:0,
+			height:0,
+		},'slow');
+		/////////////////////////////////////////////////////////////////////////////////////////
 		var cartObject={};
 		cartObject.price = price;
 		cartObject.name = name;
@@ -44,16 +66,19 @@ jQuery(document).ready(function(){
                        +'</li>';
 		$("#shoppingcartwidget").append(cartWidget);
 		
+		freshCartNum();
 		//用pop可以压出内容
 		//alert(cartContainer.pop().name);
 		//JSON.stringify object转string
 		//var str = JSON.stringify(cartContainer);  
 		//alert(str);  
-		
 	});//end of cart1 click
 	
 	//给每个删除按钮绑定删除方法
-	$('#removebutton').live('click',function(){$(this).parent().parent().remove();});
+	$('#removebutton').live('click',function(){
+		$(this).parent().parent().remove();
+		
+	});
 			
 	
 });
@@ -90,3 +115,7 @@ jQuery(document).ready(function(){
 	    if(cval!=null) 
 	        document.cookie= name + "="+cval+";expires="+exp.toGMTString(); 
 	} 
+	//更新购物车商品数
+	function freshCartNum(){
+		$("#cartNum").html(cartContainer.length);
+	}
