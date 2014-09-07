@@ -57,6 +57,8 @@ jQuery(document).ready(function(){
 		cartObject.imgUrl = imgUrl;
 		cartObject.count - count;
 		cartContainer.push(cartObject);
+		////////////////////////////////////////////////////////////////////////////////////////
+		
 		var cartWidget = '<li>'
                        +'<a href="#"><img src="'+imgUrl+'" alt="" class="alignleft"  width="57" height="57"/></a>'
                        +'<span class="colortext">'+name+'</span><br/>'
@@ -77,7 +79,17 @@ jQuery(document).ready(function(){
 	//给每个删除按钮绑定删除方法
 	$('#removebutton').live('click',function(){
 		$(this).parent().parent().remove();
-		
+		var delName = $(this).parent().parent().find(".colortext").html();
+		var cartContainerLength = cartContainer.length;
+		var delIndex = 0;
+		for(var index = 0; index<cartContainerLength; index++){
+			if(cartContainer[index].name == delName){
+				delIndex = index;
+				break;
+			}
+		}//end of find del item index;
+		cartContainer.splice(delIndex,1);
+		freshCartNum();
 	});
 			
 	
