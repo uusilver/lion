@@ -42,7 +42,7 @@ function getjson() {
 	<body>
 		<a href="hello.do">Hello!</a>
 		<br />
-		<a href="contact.do">Contacts!</a>
+		<a href="contact.do">Contacts</a>
 		<br />
 		<a href="javascript:getjson()">Json</a>
 	</body>
