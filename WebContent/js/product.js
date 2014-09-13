@@ -22,7 +22,8 @@ jQuery(document).ready(function(){
 	freshCartNum();
 	
 	//显示遮盖层				 
-	//$("#content").showLoading();	
+	//$("#content").showLoading();
+	//$("#content").hideLoading();
 	
 	$(".cartbutton").click(function(){
 		

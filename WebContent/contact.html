@@ -1,238 +1,358 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<link rel="shortcut icon" href="images/favicon.ico" />
-<meta charset="UTF-8" />
-<meta name="robots" content="index, follow" />
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<title>Magnum</title>
-<!-- ////////////////////////////////// -->
-<!-- //      Start Stylesheets       // -->
-<!-- ////////////////////////////////// -->
-<link href="styles/style.css" rel="stylesheet" type="text/css" />
-<link href="styles/inner.css" rel="stylesheet" type="text/css" />
-<!--[if lt IE 9]>
-<link href="styles/ie8.css" rel="stylesheet" type="text/css" />
-<![endif]-->
-<!-- ////////////////////////////////// -->
-<!-- //      Javascript Files        // -->
-<!-- ////////////////////////////////// -->
-<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
-<script type="text/javascript" src="js/hoverIntent.js"></script> 
-<script type="text/javascript" src="js/superfish.js"></script> 
-<script type="text/javascript" src="js/supersubs.js"></script>
-<script type="text/javascript" src="js/contact.js"></script>
-<script type="text/javascript">
-jQuery(document).ready(function(){
-	//Menu
-	jQuery("ul.sf-menu").supersubs({ 
-	minWidth		: 12,		// requires em unit.
-	maxWidth		: 27,		// requires em unit.
-	extraWidth		: 3	// extra width can ensure lines don't sometimes turn over due to slight browser differences in how they round-off values
-						   // due to slight rounding differences and font-family 
-	}).superfish();  // call supersubs first, then superfish, so that subs are 
-					 // not display:none when measuring. Call before initialising 
-					 // containing tabs for same reason. 
-					 
-});
-</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Preciso</title>
+<!-- Stylesheet -->
+<link href="css/bootstrap.min.css" tppabs="http://www.sharethemes.cn/demo/Preciso/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap-responsive.min.css" tppabs="http://www.sharethemes.cn/demo/Preciso/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="css/font-awesome.min.css" tppabs="http://www.sharethemes.cn/demo/Preciso/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" tppabs="http://www.sharethemes.cn/demo/Preciso/css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/color/multicolor.css" tppabs="http://www.sharethemes.cn/demo/Preciso/css/color/multicolor.css" rel="stylesheet" type="text/css" id="changeColor" />
+<link href="css/flexslider.css" tppabs="http://www.sharethemes.cn/demo/Preciso/css/flexslider.css" rel="stylesheet" type="text/css" />
+<link href="css/fancybox.css" tppabs="http://www.sharethemes.cn/demo/Preciso/css/fancybox.css" rel="stylesheet" type="text/css" />
+<link href="css/masonry.css" tppabs="http://www.sharethemes.cn/demo/Preciso/css/masonry.css" rel="stylesheet" type="text/css" />
+<link href="../../../fonts.googleapis.com/css-family=Roboto+Condensed.css" tppabs="http://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="img/favicon.ico" />
+<!-- Scripts -->
+<script type="text/javascript" src="js/jquery-1.9.1.min.js" tppabs="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js" tppabs="http://www.sharethemes.cn/demo/Preciso/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.nicescroll.min.js" tppabs="http://www.sharethemes.cn/demo/Preciso/js/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider.min.js" tppabs="http://www.sharethemes.cn/demo/Preciso/js/jquery.flexslider.min.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.min.js" tppabs="http://www.sharethemes.cn/demo/Preciso/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="js/jquery.masonry.min.js" tppabs="http://www.sharethemes.cn/demo/Preciso/js/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="js/functions.js" tppabs="http://www.sharethemes.cn/demo/Preciso/js/functions.js"></script>
 </head>
 <body>
 
-<div id="outer-container">
-	<div id="container">
-    	<div id="top">
-        	<div id="logo"><a href="index.html"><img src="images/logo.png" alt=""  /></a></div><!-- end #logo -->
-            <div id="nav">
-                <ul id="topnav" class="sf-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a>
-                        <ul>
-                            <li><a href="elements.html">Elements</a></li>
-                            <li><a href="single-product.html">Product Details</a></li>
-                            <li><a href="single.html">Blog Details</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="product.html">Products</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="#">Portfolio</a>
-                        <ul>
-                            <li><a href="portfolio.html">Portfolio One Column</a></li>
-                            <li><a href="portfolio2.html">Portfolio Two Column</a></li>
-                            <li><a href="portfolio3.html">Portfolio Three Column</a></li>
-                            <li><a href="portfolio4.html">Portfolio Four Column</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html" class="current">Contact</a></li>
-                </ul><!-- #topnav -->
-            </div><!-- #nav -->	
-        </div><!-- end #top -->
+<!-- Header -->
+<div class="header">
+  <div class="container">
+    <div class="row"> 
+      
+      <!-- Secondary Menu -->
+      <ul class="nav nav-pills span6">
+        <li class="active"><a href="#">主页</a></li>
+        <li><a href="#">收藏夹</a></li>
+        <li><a href="#">我的账户</a></li>
+        <li><a href="#">购物车</a></li>
+        <li><a href="#">去结账</a></li>
+      </ul>
+      
+      <!-- Header Cart -->
+      <div class="cart on"><i class="icon-shopping-cart"></i>
+        <p>&euro; 1.250,00 <span>( 3 )</span></p>
         
-        <div id="header" class="innerpage">
-        	<div class="shadow"></div>
-        	<div class="container940">
-        		<h1 class="pagetitle">Contact Us</h1>
-                <div class="pagedesc">This can be your Tagline or something you want.</div>
-                <div class="clear"></div><!-- clear float -->
-            </div><!-- end container940 -->
-        </div><!-- end #header -->
-        
-        
-		<div id="content" class="withsidebar">
-        	<div id="main">
-            	<div id="maincontent">
-                    <h2 class="title_pattern uppercase"><span>Keep In Touch With Us</span></h2>
-                    <p>Proin sed sem ante. Integer lacus orci, lacinia blandit euismod sed, sagittis et magna. Pellentesque gravida fermentum pulvinar. <span class="colortext">Cras id convallis urna.</span> Fusce eget leo quis tellus blandit porta. Mauris porta facilisis lacus, a ultricies lacus sagittis a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+        <!-- Header Cart Content -->
+        <div class="cart-content">
+          <div class="mini-cart-info">
+            <h3>我的购物车</h3>
+            <ul>
+              <li><a href="#"><img src="products/iphone.png" tppabs="http://www.sharethemes.cn/demo/Preciso/products/iphone.png" alt="Product" /></a>
+                <div class="mini-cart-detail">
+                  <h5><a href="#">iPhone 5 16GB Black</a></h5>
+                  <em>1 item</em>
+                  <p><span>&euro; 1.230</span> &euro; 880</p>
+                </div>
+              </li>
+              <li><a href="#"><img src="products/iphone.png" tppabs="http://www.sharethemes.cn/demo/Preciso/products/iphone.png" alt="Product" /></a>
+                <div class="mini-cart-detail">
+                  <h5><a href="#">iPhone 4s 8GB White</a></h5>
+                  <em>1 item</em>
+                  <p>&euro; 120.00</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="mini-cart-total">
+            <ul>
+              <li>Sub-Total <span>&euro; 101.00</span></li>
+              <li>Eco Tax <span>&euro; 2.00</span></li>
+              <li>VAT <span>&euro; 17.68</span></li>
+            </ul>
+            <p class="total">总价 <span>&euro; 120.00</span> 
+          </div>
+          <div class="checkout"><a href="#" class="btn">查看购物车</a> <a href="#" class="btn btn-checkout">去结账</a></div>
+        </div>
+      </div>
+      
+      <!-- Currency -->
+      <ul class="nav nav-pills currency">
+        <li class="active"><a href="#">&euro;</a></li>
+        <li><a href="#">$</a></li>
+        <li><a href="#">&pound;</a></li>
+      </ul>
+      
+      <!-- Header Login -->
+      <p class="log-reg"><a href="#">登陆</a> <a href="#">注册</a></p>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Logo --> 
+<a href="#" id="logo"><img src="img/logo.png" tppabs="http://www.sharethemes.cn/demo/Preciso/img/logo.png" alt="logo" /></a> 
+
+<!-- Main Navbar -->
+<hr class="bordered" />
+<div class="navbar-cont">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container"><a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse"><i class="icon-align-justify"></i></a>
+              <div class="nav-collapse collapse navbar-responsive-collapse">
+                <ul class="nav">
+                  <li><a href="index.html" tppabs="http://www.sharethemes.cn/demo/Preciso/index.html">主页</a></li>
+                  <li class="dropdown active"><a href="about.html" tppabs="http://www.sharethemes.cn/demo/Preciso/about.html" class="dropdown-toggle" data-toggle="dropdown">页面<i class="icon-angle-down"></i></a> 
                     
-                    <div class="separator line"></div>
-                    
-                    
-                    <div id="contactform">
-                      <form id="contact" action="#">
-                        <fieldset>
-                          <label for="name" id="name_label">Name:</label>
-                          <input type="text" name="name" id="name"  value="" class="text-input" /><br/>
-                          <label for="email" id="email_label">E-mail:</label>
-                          <input type="text" name="email" id="email"  value="" class="text-input" /><br/>
-                          <label for="subject" id="subject_label">Subject:</label>
-                          <input type="text" name="subject" id="subject"  value="" class="text-input" /><br/>
-                          <label for="msg" id="msg_label">Message:</label>
-                         <textarea cols="60" rows="10" name="msg" id="msg" ></textarea> <br class="clear" />
-                          <input type="submit" name="submit" class="butcontact" id="submit_btn" value="Submit"/>
-                        </fieldset>
-                      </form>
-                      <br class="clear" />
-                      <span class="error" id="name_error">Please enter name !</span>
-                      <span class="error" id="email_error">Please enter email address !</span>
-                      <span class="error" id="email_error2">Please enter valid email address !</span>
-                      <span class="error" id="msg_error">Please enter message !</span>
-                      
-                    </div><!-- end #contactform -->
-                    
-                     <div class="clear"></div><!-- clear float -->
-                </div><!-- end #maincontent -->
-                <div id="sidebar">
-                	<ul>
-                    	<li class="widget-container">
-                        	<h2 class="widget-title">Contact Us</h2>
-                            <div class="textwidget">
-                           <p> Magnum - Office Blvd No. 356-357<br/>
-                            Farmville Town, LA 12345</p>
-                            <p>
-                            Telp: +62 500 800 123<br/>
-                            Fax: +62 500 800 112<br/>
-                            Email: <a href="mailto:testmail@yourdomain.com" class="colortext">testmail@yourdomain.com</a><br/>
-                            Website: <a href="http://www.templatesquare.com" class="colortext">www.templatesquare.com</a><br/>
-                            </p>
-                            </div>
-                        </li>
-                    	<li class="widget-container">
-                        	<h2 class="widget-title">Our Map</h2>
-                            <div class="textwidget">
-                            <iframe style="width:270px; height:250px; border:0; margin:0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Jalan+Kemanggisan+Utama,+Jakarta,+Indonesia&amp;sll=37.0625,-95.677068&amp;sspn=46.092115,79.013672&amp;ie=UTF8&amp;hq=&amp;hnear=Jalan+Kemanggisan+Utama,+Jakarta+Barat,+Jakarta,+Indonesia&amp;ll=-6.189793,106.7908&amp;spn=0.016639,0.034246&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Jalan+Kemanggisan+Utama,+Jakarta,+Indonesia&amp;sll=37.0625,-95.677068&amp;sspn=46.092115,79.013672&amp;ie=UTF8&amp;hq=&amp;hnear=Jalan+Kemanggisan+Utama,+Jakarta+Barat,+Jakarta,+Indonesia&amp;ll=-6.189793,106.7908&amp;spn=0.016639,0.034246&amp;z=14&amp;iwloc=A" style="text-align:left; color:#555">View Larger Map</a></small>
-                            </div>
-                        </li>
+                    <!-- Dropdown Navbar -->
+                    <ul class="dropdown-menu">
+                      <li><a href="about.html" tppabs="http://www.sharethemes.cn/demo/Preciso/about.html">关于我们</a></li>
+                      <li><a href="services.html" tppabs="http://www.sharethemes.cn/demo/Preciso/services.html">服务</a></li>
+                      <li><a href="full-width.html" tppabs="http://www.sharethemes.cn/demo/Preciso/full-width.html">全宽度案例1</a></li>
+                      <li><a href="left-sidebar.html" tppabs="http://www.sharethemes.cn/demo/Preciso/left-sidebar.html">左侧导航栏</a></li>
+                      <li><a href="right-sidebar.html" tppabs="http://www.sharethemes.cn/demo/Preciso/right-sidebar.html">右侧导航栏</a></li>
+                      <li><a href="page-404.html" tppabs="http://www.sharethemes.cn/demo/Preciso/page-404.html">404错误标准页面</a></li>
+                      <li class="active"><a href="contact.html" tppabs="http://www.sharethemes.cn/demo/Preciso/contact.html">联系我们</a></li>
                     </ul>
-                </div><!-- end #sidebar -->
+                  </li>
+                  <li class="dropdown"><a href="portfolio-columns.html" tppabs="http://www.sharethemes.cn/demo/Preciso/portfolio-columns.html" class="dropdown-toggle" data-toggle="dropdown">商品组合<i class="icon-angle-down"></i></a> 
+                    
+                    <!-- Dropdown Navbar -->
+                    <ul class="dropdown-menu">
+                      <li><a href="portfolio-columns.html" tppabs="http://www.sharethemes.cn/demo/Preciso/portfolio-columns.html">商品组合1</a></li>
+                      <li><a href="portfolio-masonry.html" tppabs="http://www.sharethemes.cn/demo/Preciso/portfolio-masonry.html">商品组合2</a></li>
+                      <li><a href="portfolio-detail.html" tppabs="http://www.sharethemes.cn/demo/Preciso/portfolio-detail.html">商品组合单个</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a href="blog-home.html" tppabs="http://www.sharethemes.cn/demo/Preciso/blog-home.html" class="dropdown-toggle" data-toggle="dropdown">博客<i class="icon-angle-down"></i></a> 
+                    
+                    <!-- Dropdown Navbar -->
+                    <ul class="dropdown-menu">
+                      <li><a href="blog-home.html" tppabs="http://www.sharethemes.cn/demo/Preciso/blog-home.html">博客主页</a></li>
+                      <li><a href="blog-post.html" tppabs="http://www.sharethemes.cn/demo/Preciso/blog-post.html">博客发布</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a href="shop-home.html" tppabs="http://www.sharethemes.cn/demo/Preciso/shop-home.html" class="dropdown-toggle" data-toggle="dropdown">商城<i class="icon-angle-down"></i></a> 
+                    
+                    <!-- Dropdown Navbar -->
+                    <ul class="dropdown-menu">
+                      <li class="active"><a href="shop-home.html" tppabs="http://www.sharethemes.cn/demo/Preciso/shop-home.html">在线商城</a></li>
+                      <li><a href="category.html" tppabs="http://www.sharethemes.cn/demo/Preciso/category.html">商品列表</a></li>
+                      <li><a href="product.html" tppabs="http://www.sharethemes.cn/demo/Preciso/product.html">商品细节</a></li>
+                      <li><a href="cart.html" tppabs="http://www.sharethemes.cn/demo/Preciso/cart.html">购物车</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="contact.html" tppabs="http://www.sharethemes.cn/demo/Preciso/contact.html">联系我们</a></li>
+                </ul>
                 
-                <div class="clear"></div><!-- clear float -->
-            </div><!-- end #main -->
-		</div><!-- end #content -->
+                <!-- Navbar Search -->
+                <form action="http://www.sharethemes.cn/demo/Preciso/header-search" class="header-search">
+                  <fieldset>
+                    <input type="text" placeholder="搜索" />
+                    <button><i class="icon-search"></i></button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="bordered" />
+<div class="container">
+  <div class="row"> 
+    
+    <!-- Contact Page-->
+    <div class="span12"> 
+      
+      <!-- Breadcrumb -->
+      <ul class="breadcrumb">
+        <li><a href="#">主页</a> <span class="divider">/</span></li>
+        <li><a href="#">页面</a> <span class="divider">/</span></li>
+        <li class="active">联系我们</li>
+      </ul>
+      <h1 class="margin-bottom">联系 <span>我们</span></h1>
+    </div>
+  </div>
+  <div class="row"> 
+    
+    <!-- Contact Address -->
+    <div class="span3">
+      <h4 class="margin-bottom">地址信息</h4>
+      <address>
+      <strong>XX, 公司.</strong><br>
+                     中山东路<br>
+                     南京<br>
+      P: (123) 456 7890
+      </address>
+      <address>
+      <strong>全称</strong><br>
+      <a href="#">first.last@example.com</a>
+      </address>
+    </div>
+    
+    <!-- Contact Form -->
+    <div class="span3">
+      <h4 class="margin-bottom">联系我们</h4>
+      <form action="http://www.sharethemes.cn/demo/Preciso/map-form" class="map-form">
+        <div class="control-group">
+          <label class="control-label">姓名</label>
+          <div class="controls">
+            <input type="text" placeholder="姓名">
+            <input type="text" placeholder="城市">
+            <input type="text" placeholder="邮箱地址">
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">信息</label>
+          <div class="controls">
+            <textarea rows="3"></textarea>
+          </div>
+        </div>
+        <div class="control-group no-margin">
+          <div class="controls">
+            <button type="submit" class="btn">发送</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    <!-- Contact Map -->
+    <div class="span6 margin-bottom">
+      <div id="map-canvas" style="width: 100%; height: 360px;">地图</div>
+    </div>
+  </div>
+</div>
+
+<!-- Small Banners -->
+<div class="container">
+  <div class="row">
+    <div class="span6">
+      <div class="banner-small"><a href="#"><img src="banner/banner-small-1.jpg" tppabs="http://www.sharethemes.cn/demo/Preciso/banner/banner-small-1.jpg" alt="Banner" /></a></div>
+    </div>
+    <div class="span6">
+      <div class="banner-small"><a href="#"><img src="banner/banner-small-2.jpg" tppabs="http://www.sharethemes.cn/demo/Preciso/banner/banner-small-2.jpg" alt="Banner" /></a></div>
+    </div>
+  </div>
+</div>
+
+<!-- Brands List -->
+<div class="container">
+  <div class="brands">
+    <ul class="thumbnails">
+      <li class="span2"><a href="#"><img src="brands/apple.png" tppabs="http://www.sharethemes.cn/demo/Preciso/brands/apple.png" alt="Logo" class="thumbnail" /></a></li>
+      <li class="span2"><a href="#"><img src="brands/canon.png" tppabs="http://www.sharethemes.cn/demo/Preciso/brands/canon.png" alt="Logo" class="thumbnail" /></a></li>
+      <li class="span2"><a href="#"><img src="brands/sony.png" tppabs="http://www.sharethemes.cn/demo/Preciso/brands/sony.png" alt="Logo" class="thumbnail" /></a></li>
+      <li class="span2"><a href="#"><img src="brands/microsoft.png" tppabs="http://www.sharethemes.cn/demo/Preciso/brands/microsoft.png" alt="Logo" class="thumbnail" /></a></li>
+      <li class="span2"><a href="#"><img src="brands/hp.png" tppabs="http://www.sharethemes.cn/demo/Preciso/brands/hp.png" alt="Logo" class="thumbnail" /></a></li>
+      <li class="span2"><a href="#"><img src="brands/samsung.png" tppabs="http://www.sharethemes.cn/demo/Preciso/brands/samsung.png" alt="Logo" class="thumbnail" /></a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="container">
+    <div class="row"> 
+      
+      <!-- Footer Info -->
+      <div class="span3">
+        <h5><i class="icon-globe"></i>店铺照片</h5>
+        <img src="products/store.jpg" tppabs="http://www.sharethemes.cn/demo/Preciso/products/store.jpg" alt="Store" /> </div>
+      <div class="span3">
+        <h5><i class="icon-globe"></i>关于我们</h5>
+        <p>相关介绍放在这边</p>
+      </div>
+      
+      <!-- Footer Contact -->
+      <div class="span3">
+        <h5><i class="icon-asterisk"></i>联系方式</h5>
+        <ul class="footer-contact">
+          <li><i class="icon-map-marker"></i>中山东路, 南京</li>
+          <li><i class="icon-phone"></i>123123123</li>
+          <li><i class="icon-mobile-phone"></i>123123123</li>
+          <li><i class="icon-envelope-alt"></i><a href="#">your@email.com</a></li>
+        </ul>
+      </div>
+      
+      <!-- Footer Social -->
+      <div class="span3">
+        <h5><i class="icon-rss"></i>添加关注（建议放微博，微信）</h5>
+        <div class="footer-social"> <a href="#" class="icon-facebook"></a> <a href="#" class="icon-twitter"></a> <a href="#" class="icon-google-plus"></a> <a href="#" class="icon-pinterest"></a> <a href="#" class="icon-linkedin"></a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Links -->
+<div class="footer-links">
+  <div class="container">
+    <div class="row">
+      <div class="span3">
+        <h5><i class="icon-info"></i>信息</h5>
+        <ul>
+          <li><a href="#">关于我们</a></li>
+          <li><a href="#">配送信息</a></li>
+          <li><a href="#">相关条款</a></li>
+          <li><a href="#">信息介绍</a></li>
+        </ul>
+      </div>
+      <div class="span3">
+        <h5><i class="icon-comment"></i>客户服务</h5>
+        <ul>
+          <li><a href="#">联系我们</a></li>
+          <li><a href="#">退货</a></li>
+          <li><a href="#">配送</a></li>
+          <li><a href="#">网站地图</a></li>
+        </ul>
+      </div>
+      <div class="span3">
+        <h5><i class="icon-folder-open"></i>更多</h5>
+        <ul>
+          <li><a href="#">品牌</a></li>
+          <li><a href="#">优惠</a></li>
+          <li><a href="#">商家联盟</a></li>
+          <li><a href="#">特惠</a></li>
+        </ul>
+      </div>
+      <div class="span3">
+        <h5><i class="icon-unlock-alt"></i>我的账户</h5>
+        <ul>
+          <li><a href="#">我的账户</a></li>
+          <li><a href="#">订单历史</a></li>
+          <li><a href="#">收藏夹</a></li>
+          <li><a href="#">新闻</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr class="bordered" />
+</div>
+
+<!-- Copy -->
+<div class="copy">
+  <div class="container">
+    <div class="row">
+      <div class="span12"> 
         
-		<div id="footer">
-        <div id="footer-pattern">
-        
-			<div class="container940">
-            	<div id="footcol1">
-                	<ul>
-                    	<li class="widget-container">
-                            <h2 class="widget-title">Latest Articles</h2>
-                            <ul id="recentpostwidget">
-                                <li>
-                                    <img src="images/content/pic5.jpg" alt="" class="alignleft frame" />
-                                    <h5><a href="#">Hello World!!</a></h5>
-                                    <span>Lorem ipsum dolor sit amet...</span>
-                                </li>
-                                <li>
-                                    <img src="images/content/pic6.jpg" alt="" class="alignleft frame" />
-                                    <h5><a href="#">Hello World!!</a></h5>
-                                    <span>Lorem ipsum dolor sit amet...</span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div id="footcol2">
-                	<ul>
-                        <li class="widget-container">
-                        	<h2 class="widget-title">Blogroll</h2>
-                            <ul>
-                            	<li><a href="#">Vivamus hendrerit venenatis quam</a></li>
-                                <li><a href="#">Aenean congue nisl in nibh</a></li>
-                                <li><a href="#">Proin tempus tempus orci eu imperdiet</a></li>
-                                <li><a href="#">Mauris interdum</a></li>
-                                <li><a href="#">Donec id turpis at risus</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div id="footcol3">
-                	<ul>
-                        <li class="widget-container">
-                        	<h2 class="widget-title">Gallery</h2>
-                            <ul id="flickr">
-                            	<li><a href="#"><img src="images/content/pic7.jpg" alt="" class="frame" /></a></li>
-                                <li><a href="#"><img src="images/content/pic8.jpg" alt="" class="frame" /></a></li>
-                                <li class="nomargin"><a href="#"><img src="images/content/pic9.jpg" alt="" class="frame" /></a></li>
-                                <li><a href="#"><img src="images/content/pic10.jpg" alt="" class="frame" /></a></li>
-                                <li><a href="#"><img src="images/content/pic11.jpg" alt="" class="frame" /></a></li>
-                                <li class="nomargin"><a href="#"><img src="images/content/pic12.jpg" alt="" class="frame" /></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div id="footcol4">
-                	<ul>
-                        <li class="widget-container">
-                        	<h2 class="widget-title">About Magnum</h2>
-                            <div class="textwidget">
-                            <p>
-                            Nulla interdum, enim eu dictum pellentesque, ipsum elit varius purus, et imperdiet odio magna lobortis purus. 
-                            </p>
-                            <span>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus sed mauris at eros mollis ultricies vitae porta dui. </span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-           
-            <div class="clear"></div><!-- clear float -->
-            </div><!-- end container940 -->
-            
-        </div><!-- end #footer-pattern -->  
-		</div><!-- end #footer -->
-        
-        <div id="after-footer">
-        	<div class="container940">
-                <div id="sn">
-                	<ul>
-                    	<li><a href="#"><img src="images/icons/fb.png" alt="" /></a></li>
-                        <li><a href="#"><img src="images/icons/stumbleupon.png" alt="" /></a></li>
-                        <li><a href="#"><img src="images/icons/lastfm.png" alt="" /></a></li>
-                        <li><a href="#"><img src="images/icons/twitter.png" alt="" /></a></li>
-                        <li><a href="#"><img src="images/icons/youtube.png" alt="" /></a></li>
-                    </ul>
-                </div>
-                <div id="footertext">
-                    Copyright &copy;2012 Magnum.  All Rights Reserved.
-                </div>
-               <div class="clear"></div><!-- clear float -->
-            </div><!-- end container940 -->
-        </div><!-- end #after-footer -->
-        
-	</div><!-- end #container -->
-</div><!-- end #outer-container -->
-		
+        <!-- Cards --> 
+        <img src="img/cards.png" tppabs="http://www.sharethemes.cn/demo/Preciso/img/cards.png" alt="Cards" />
+        <p class="text-center">Powered by <strong>T-Mind</strong> - &copy; 2014 <a href="#">T-Mind工作室</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Change Color -->
+<div class="colorSw"><a href="#" class="change-css change-css-multicolor" rel="css/color/multicolor.css">Multicolor</a> <a href="#" class="change-css change-css-red" rel="css/color/red.css">Red</a> <a href="#" class="change-css change-css-green" rel="css/color/green.css">Green</a> <a href="#" class="change-css change-css-yellow" rel="css/color/yellow.css">Yellow</a> <a href="#" class="change-css change-css-blue" rel="css/color/blue.css">Blue</a> <a href="#" class="change-css change-css-violet" rel="css/color/violet.css">Violet</a></div>
+
+<!-- to Top -->
+<div id="toTop"><i class="icon-chevron-up icon-white"></i></div>
 </body>
 </html>

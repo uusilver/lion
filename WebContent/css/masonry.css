@@ -1,0 +1,159 @@
+@charset "utf-8";
+/* CSS Document */
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* Isotope boxes */
+#isotope {
+	margin-bottom: 40px;
+}
+#isotope .item {
+	width: 20%;
+}
+#isotope .item img {
+	width: 100%;
+}
+#isotope .item a.folio {
+	display: block;
+}
+#isotope .item .folio-detail {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.25);
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all linear 0.25s;
+	-ms-transition: all linear 0.25s;
+	-moz-transition: all linear 0.25s;
+	-webkit-transition: all linear 0.25s;
+	-o-transition: all linear 0.25s;
+}
+#isotope .item:hover .folio-detail {
+	opacity: 1;
+}
+#isotope .item .folio-detail a {
+	margin: -25px 0 0 -25px;
+	width: 50px;
+	height: 50px;
+	background: #FC0;
+	border-radius: 100%;
+	line-height: 50px;
+	color: #FFF;
+	text-align: center;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: all linear 0.1s;
+	-ms-transition: all linear 0.1s;
+	-moz-transition: all linear 0.1s;
+	-webkit-transition: all linear 0.1s;
+	-o-transition: all linear 0.1s;
+}
+#isotope .item .folio-detail a:hover {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	background: #0CC;
+	border-radius: 0;
+	line-height: 100%;
+	opacity: 0.5;
+	top: 0;
+	left: 0;
+}
+#isotope .item .folio-detail a:hover i {
+	margin-top: -25px;
+	margin-left: -25px;
+	width: 50px;
+	height: 50px;
+	font-size: 20px;
+	line-height: 50px;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+/* Desktop large layout */
+@media (min-width: 1200px) {
+}
+
+/* Desktop small layout */
+@media (min-width: 980px) and (max-width: 1199px) {
+}
+
+/* Tablet layout */
+@media (min-width: 768px) and (max-width: 979px) {
+#isotope .item {
+	width: 25%;
+}
+}
+
+/* Mobile landscape layout */
+@media (min-width: 480px) and (max-width: 767px) {
+#isotope {
+	margin-bottom: 20px;
+}
+#isotope .item {
+	margin-bottom: 20px;
+	width: 100%;
+}
+}
+
+/* Mobile portrait layout */
+@media (max-width: 479px) {
+#isotope {
+	margin-bottom: 20px;
+}
+#isotope .item {
+	margin-bottom: 20px;
+	width: 100%;
+}
+}

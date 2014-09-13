@@ -1,0 +1,214 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+	color: #FC0;
+}
+.breadcrumb li a:hover {
+	color: #0CC;
+}
+.btn.p404 {
+	background: #0CC;
+}
+.btn.p404:hover {
+	background: #FC0;
+}
+.header .log-reg a:hover {
+	color: #0CC;
+}
+.header .cart.on i {
+	background: #FC0;
+}
+.header .cart .cart-content .mini-cart-info li h5 a:hover {
+	color: #0CC;
+}
+.header .cart .cart-content .mini-cart-info li p {
+	color: #0CC;
+}
+.header .cart .cart-content .checkout .btn {
+	background: #FC0;
+}
+.header .cart .cart-content .checkout .btn:hover {
+	background: #0CC;
+}
+.navbar-inner .nav li:hover {
+	background: #0CC;
+}
+.navbar-inner .nav li.active a, .navbar-inner .nav li.active a:hover {
+	background: #FC0;
+}
+.navbar-inner .nav li.dropdown.active .dropdown-toggle {
+	background: #FC0;
+}
+.navbar-inner .nav li .dropdown-menu li:hover a, .navbar-inner .nav li .dropdown-menu li.active a {
+	color: #0CC;
+}
+.date a {
+	color: #0CC;
+}
+.small-desc a {
+	color: #0CC;
+}
+.about-list li .thumbnail:hover .icon-service {
+	background: #FC0;
+}
+.about-list li .thumbnail .caption h3 a {
+	color: #0CC;
+}
+address a {
+	color: #0CC;
+}
+.map-form button {
+	background: #0CC;
+}
+.map-form button:hover {
+	background: #FC0;
+}
+.products-filter p a:hover, .products-filter p a.active {
+	color: #0CC;
+}
+.products-filter p a.active i {
+	background: #FC0;
+}
+.products-filter p a i:hover, .products-filter p a.active i:hover {
+	background: #0CC;
+}
+.accordion-heading .accordion-toggle {
+	color: #0CC;
+}
+.pagination ul li.active a, .pagination ul li.active a:hover {
+	background: #FC0;
+	border-color: #FC0;
+}
+.sidebar .nav-stacked li a:hover, .sidebar .nav-stacked li.active a {
+	color: #0CC;
+}
+.sidebar p a {
+	color: #0CC;
+}
+.products-list-small .nav-tabs a.active span {
+	color: #FC0;
+}
+.products-list li .thumbnail .folio-detail a {
+	background: #FC0;
+}
+.products-list li .thumbnail .folio-detail a:hover {
+	background: #0CC;
+}
+.products-list li .thumbnail p a:hover {
+	color: #0CC;
+}
+.products-list li .rating i {
+	color: #FC0;
+}
+.products-list li .thumbnail .price {
+	color: #0CC;
+}
+.products-list li .thumbnail input[type=button] {
+	background: #0CC;
+}
+.products-list li:hover .thumbnail input[type=button]:hover {
+	background: #FC0;
+}
+.products-list-small li:hover .thumbnail input[type=button]:hover {
+	background: #0CC;
+}
+.add-list-detail:hover, .add-comp-detail:hover {
+	background: #FC0;
+}
+.products-list li .thumbnail:hover .add-list:hover, .products-list li .thumbnail:hover .add-comp:hover {
+	background: #FC0;
+}
+.products-list li .thumbnail .new {
+	background: #AD0;
+}
+.products-list li .thumbnail .sale {
+	background: #F33;
+}
+.blog-list li a {
+	color: #0CC;
+}
+.blog-list li .blog-thumb a {
+	background: #FC0;
+}
+.blog-list li .blog-thumb a:hover {
+	background: #0CC;
+}
+.blog-list li .btn {
+	background: #0CC;
+}
+.blog-list li .btn:hover {
+	background: #FC0;
+}
+.media-list a {
+	color: #0CC;
+}
+.media-list .media .media-body a.reply:hover {
+	background: #FC0;
+}
+.write-review input[type=submit] {
+	background: #FC0;
+}
+.write-review input[type=submit]:hover {
+	background: #0CC;
+}
+.main-rating i {
+	color: #FC0;
+}
+.input-quantity {
+	background: #FC0;
+}
+.btn-add-cart {
+	background: #0CC;
+}
+.table td a {
+	color: #0CC;
+}
+.main-checkout .btn {
+	background: #FC0;
+}
+.main-checkout .btn:hover {
+	background: #0CC;
+}
+.footer p a {
+	color: #0CC;
+}
+.footer .footer-contact li a {
+	color: #0CC;
+}
+.footer-links ul li a:hover {
+	color: #0CC;
+}
+.copy p a {
+	color: #0CC;
+}
+
+/* Tablet layout */
+@media (min-width: 768px) and (max-width: 979px) {
+.navbar-inner .nav li:hover, .navbar-inner .nav li:hover a {
+	background: #0CC;
+}
+.navbar-inner .nav li.dropdown.open .dropdown-toggle, .navbar-inner .nav li.dropdown.active.open .dropdown-toggle {
+	background: #FC0;
+}
+}
+
+/* Mobile landscape layout */
+@media (min-width: 480px) and (max-width: 767px) {
+.navbar-inner .nav li:hover, .navbar-inner .nav li:hover a {
+	background: #0CC;
+}
+.navbar-inner .nav li.dropdown.open .dropdown-toggle, .navbar-inner .nav li.dropdown.active.open .dropdown-toggle {
+	background: #FC0;
+}
+}
+
+/* Mobile portrait layout */
+@media (max-width: 479px) {
+.navbar-inner .nav li:hover, .navbar-inner .nav li:hover a {
+	background: #0CC;
+}
+.navbar-inner .nav li.dropdown.open .dropdown-toggle, .navbar-inner .nav li.dropdown.active.open .dropdown-toggle {
+	background: #FC0;
+}
+}

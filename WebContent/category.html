@@ -41,15 +41,39 @@
       </ul>
       
       <!-- Header Cart -->
-      <div class="cart"><i class="icon-shopping-cart"></i>
-        <p>&euro; 0,00 <span>( 0 )</span></p>
+      <div class="cart on"><i class="icon-shopping-cart"></i>
+        <p>&euro; 1.250,00 <span>( 3 )</span></p>
         
         <!-- Header Cart Content -->
         <div class="cart-content">
           <div class="mini-cart-info">
             <h3>Shopping Cart</h3>
-            <p class="empty">Empty cart</p>
+            <ul>
+              <li><a href="#"><img src="products/iphone.png" tppabs="http://www.sharethemes.cn/demo/Preciso/products/iphone.png" alt="Product" /></a>
+                <div class="mini-cart-detail">
+                  <h5><a href="#">iPhone 5 16GB Black</a></h5>
+                  <em>1 item</em>
+                  <p><span>&euro; 1.230</span> &euro; 880</p>
+                </div>
+              </li>
+              <li><a href="#"><img src="products/iphone.png" tppabs="http://www.sharethemes.cn/demo/Preciso/products/iphone.png" alt="Product" /></a>
+                <div class="mini-cart-detail">
+                  <h5><a href="#">iPhone 4s 8GB White</a></h5>
+                  <em>1 item</em>
+                  <p>&euro; 120.00</p>
+                </div>
+              </li>
+            </ul>
           </div>
+          <div class="mini-cart-total">
+            <ul>
+              <li>Sub-Total <span>&euro; 101.00</span></li>
+              <li>Eco Tax <span>&euro; 2.00</span></li>
+              <li>VAT <span>&euro; 17.68</span></li>
+            </ul>
+            <p class="total">Total <span>&euro; 120.00</span> 
+          </div>
+          <div class="checkout"><a href="#" class="btn">View Cart</a> <a href="#" class="btn btn-checkout">Checkout</a></div>
         </div>
       </div>
       
@@ -81,7 +105,7 @@
             <div class="container"><a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse"><i class="icon-align-justify"></i></a>
               <div class="nav-collapse collapse navbar-responsive-collapse">
                 <ul class="nav">
-                  <li class="active"><a href="index.html" tppabs="http://www.sharethemes.cn/demo/Preciso/index.html">Home</a></li>
+                  <li><a href="index.html" tppabs="http://www.sharethemes.cn/demo/Preciso/index.html">Home</a></li>
                   <li class="dropdown"><a href="about.html" tppabs="http://www.sharethemes.cn/demo/Preciso/about.html" class="dropdown-toggle" data-toggle="dropdown">Pages<i class="icon-angle-down"></i></a> 
                     
                     <!-- Dropdown Navbar -->
@@ -112,12 +136,12 @@
                       <li><a href="blog-post.html" tppabs="http://www.sharethemes.cn/demo/Preciso/blog-post.html">Blog Post</a></li>
                     </ul>
                   </li>
-                  <li class="dropdown"><a href="shop-home.html" tppabs="http://www.sharethemes.cn/demo/Preciso/shop-home.html" class="dropdown-toggle" data-toggle="dropdown">Shop<i class="icon-angle-down"></i></a> 
+                  <li class="dropdown active"><a href="shop-home.html" tppabs="http://www.sharethemes.cn/demo/Preciso/shop-home.html" class="dropdown-toggle" data-toggle="dropdown">Shop<i class="icon-angle-down"></i></a> 
                     
                     <!-- Dropdown Navbar -->
                     <ul class="dropdown-menu">
                       <li><a href="shop-home.html" tppabs="http://www.sharethemes.cn/demo/Preciso/shop-home.html">Shop Home</a></li>
-                      <li><a href="category.html" tppabs="http://www.sharethemes.cn/demo/Preciso/category.html">Shop Category List</a></li>
+                      <li class="active"><a href="category.html" tppabs="http://www.sharethemes.cn/demo/Preciso/category.html">Shop Category List</a></li>
                       <li><a href="product.html" tppabs="http://www.sharethemes.cn/demo/Preciso/product.html">Shop Product Detail</a></li>
                       <li><a href="cart.html" tppabs="http://www.sharethemes.cn/demo/Preciso/cart.html">Shop Cart</a></li>
                     </ul>
@@ -142,158 +166,136 @@
 </div>
 <hr class="bordered" />
 <div class="container">
-  <div class="row">
-    <div class="span12"> 
+  <div class="row"> 
+    
+    <!-- Sidebar -->
+    <div class="span3 sidebar"><img src="products/category-preview.jpg" tppabs="http://www.sharethemes.cn/demo/Preciso/products/category-preview.jpg" alt="Category" /></div>
+    
+    <!-- Products List -->
+    <div class="span9"> 
       
-      <!-- Flex Slider -->
-      <div class="flexslider">
-        <ul class="slides">
-          <li><a href="#"><img src="banner/slider.jpg" tppabs="http://www.sharethemes.cn/demo/Preciso/banner/slider.jpg" alt="Slider" /></a></li>
-          <li><a href="#"><img src="banner/slider2.jpg" tppabs="http://www.sharethemes.cn/demo/Preciso/banner/slider2.jpg" alt="Slider" /></a></li>
-        </ul>
-      </div>
+      <!-- Breadcrumb -->
+      <ul class="breadcrumb">
+        <li><a href="#">Home</a> <span class="divider">/</span></li>
+        <li><a href="#">Library</a> <span class="divider">/</span></li>
+        <li class="active">Data</li>
+      </ul>
+      <h1>SmartPhone &amp; Tablet</h1>
+      <p class="small-desc">Lorem ipsum dolor sit amet, consectetuer <strong>adipiscing</strong> elit.<br />
+        Sed diam nonummy nibh euismod tincidunt ut <a href="#">laoreet dolore</a> magna aliquam erat volutpat.</p>
     </div>
   </div>
-</div>
-
-<!-- Products List -->
-<div class="products-list">
-  <div class="container">
-    <h3><span>Featured</span> Products</h3>
-    <ul class="thumbnails">
-      
-      <!-- Products Single Box -->
-      <li class="span3">
-        <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png" tppabs="http://www.sharethemes.cn/demo/Preciso/products/iphone.png" alt="Product" /></a>
-          <p><a href="#">iPhone 5 16GB Black</a></p>
-          <p class="price">&euro; 574</p>
-          <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star-half-empty"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
-          <input type="button" value="Add to Cart" class="btn" />
-          <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a><span class="new">New</span></div>
-      </li>
-      
-      <!-- Products Single Box -->
-      <li class="span3">
-        <div class="thumbnail"><a href="#" class="thumb"><img src="products/ipad.png" tppabs="http://www.sharethemes.cn/demo/Preciso/products/ipad.png" alt="Product" /></a>
-          <p><a href="#">iPad 2 16GB White</a></p>
-          <p class="price">&euro; 308</p>
-          <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
-          <input type="button" value="Add to Cart" class="btn" />
-          <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a></div>
-      </li>
-      
-      <!-- Products Single Box -->
-      <li class="span3">
-        <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png" tppabs="http://www.sharethemes.cn/demo/Preciso/products/iphone.png" alt="Product" /></a>
-          <p><a href="#">iPhone 5 16GB Black</a></p>
-          <p class="price"><span>&euro; 1.230</span> &euro; 880</p>
-          <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
-          <input type="button" value="Add to Cart" class="btn" />
-          <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a><span class="sale">Sale</span></div>
-      </li>
-      
-      <!-- Products Single Box -->
-      <li class="span3">
-        <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png" tppabs="http://www.sharethemes.cn/demo/Preciso/products/iphone.png" alt="Product" /></a>
-          <p><a href="#">iPhone 5 16GB Black</a></p>
-          <p class="price">&euro; 1.340</p>
-          <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
-          <input type="button" value="Add to Cart" class="btn" />
-          <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a></div>
-      </li>
-    </ul>
-  </div>
-</div>
-<div class="container">
   <div class="row">
-    <div class="span12">
-      <h2 class="text-center margin-top margin-bottom">Our <span>Services</span></h2>
-      
-      <!-- Services List -->
-      <ul class="thumbnails about-list">
-        
-        <!-- Service Single -->
-        <li class="span3">
-          <div class="thumbnail"><i class="icon-globe icon-service"></i>
-            <div class="caption">
-              <h3><a href="#">Web Developer</a></h3>
-              <em>Subtitle here</em>
-              <div class="clearfix"></div>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam <strong>euismod</strong>.</p>
-            </div>
-          </div>
-        </li>
-        
-        <!-- Service Single -->
-        <li class="span3">
-          <div class="thumbnail"><i class="icon-key icon-service"></i>
-            <div class="caption">
-              <h3><a href="#">Web Developer</a></h3>
-              <em>Subtitle here</em>
-              <div class="clearfix"></div>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam <strong>euismod</strong>.</p>
-            </div>
-          </div>
-        </li>
-        
-        <!-- Service Single -->
-        <li class="span3">
-          <div class="thumbnail"><i class="icon-leaf icon-service"></i>
-            <div class="caption">
-              <h3><a href="#">Web Developer</a></h3>
-              <em>Subtitle here</em>
-              <div class="clearfix"></div>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam <strong>euismod</strong>.</p>
-            </div>
-          </div>
-        </li>
-        
-        <!-- Service Single -->
-        <li class="span3">
-          <div class="thumbnail"><i class="icon-wrench icon-service"></i>
-            <div class="caption">
-              <h3><a href="#">Web Developer</a></h3>
-              <em>Subtitle here</em>
-              <div class="clearfix"></div>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam <strong>euismod</strong>.</p>
-            </div>
-          </div>
-        </li>
-      </ul>
-      <hr />
-      
-      <!-- Portfolio Columns -->
+    <div class="span12"> 
+      <!-- Filter -->
+      <div class="row products-filter">
+        <p><a href="#" class="active"><i class="icon-th"></i></a> <a href="#"><i class="icon-th-large"></i></a></p>
+        <select>
+          <option class="selected">Show 30</option>
+          <option>Show 60</option>
+          <option>Show 90</option>
+        </select>
+        <select>
+          <option class="selected">Sort by Default</option>
+          <option>Name ( A - Z )</option>
+          <option>Name ( Z - A )</option>
+          <option>Price ( Low &gt; High )</option>
+          <option>Price ( High &gt; Low )</option>
+          <option>Rating ( Highest )</option>
+          <option>Rating ( Lowest )</option>
+          <option>Model ( A - Z )</option>
+          <option>Model ( Z - A )</option>
+        </select>
+      </div>
       <div class="products-list products-list-simple">
-        <h2 class="text-center margin-top margin-bottom">Latest <span>Works</span></h2>
         <ul class="thumbnails">
           
           <!-- Products Single Box -->
           <li class="span3">
-            <div class="thumbnail"><img src="products/folio-1.jpg" tppabs="http://www.sharethemes.cn/demo/Preciso/products/folio-1.jpg" alt="Product" class="folio" />
-              <div class="folio-detail"><a href="products/folio-1.jpg" tppabs="http://www.sharethemes.cn/demo/Preciso/products/folio-1.jpg" class="view-fancybox" rel="tag"><i class="icon-camera"></i></a></div>
-            </div>
+            <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png" tppabs="http://www.sharethemes.cn/demo/Preciso/products/iphone.png" alt="Product" /></a>
+              <p><a href="#">iPhone 5 16GB Black</a></p>
+              <p class="price">&euro; 574</p>
+              <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star-half-empty"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
+              <input type="button" value="Add to Cart" class="btn" />
+              <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a><span class="new">New</span></div>
           </li>
           
           <!-- Products Single Box -->
           <li class="span3">
-            <div class="thumbnail"><img src="products/folio-2.jpg" tppabs="http://www.sharethemes.cn/demo/Preciso/products/folio-2.jpg" alt="Product" class="folio" />
-              <div class="folio-detail"><a href="products/folio-2.jpg" tppabs="http://www.sharethemes.cn/demo/Preciso/products/folio-2.jpg" class="view-fancybox" rel="tag"><i class="icon-camera"></i></a></div>
-            </div>
+            <div class="thumbnail"><a href="#" class="thumb"><img src="products/ipad.png" tppabs="http://www.sharethemes.cn/demo/Preciso/products/ipad.png" alt="Product" /></a>
+              <p><a href="#">iPad 2 16GB White</a></p>
+              <p class="price">&euro; 308</p>
+              <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
+              <input type="button" value="Add to Cart" class="btn" />
+              <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a></div>
           </li>
           
           <!-- Products Single Box -->
           <li class="span3">
-            <div class="thumbnail"><img src="products/folio-3.jpg" tppabs="http://www.sharethemes.cn/demo/Preciso/products/folio-3.jpg" alt="Product" class="folio" />
-              <div class="folio-detail"><a href="products/folio-3.jpg" tppabs="http://www.sharethemes.cn/demo/Preciso/products/folio-3.jpg" class="view-fancybox" rel="tag"><i class="icon-camera"></i></a></div>
-            </div>
+            <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png" tppabs="http://www.sharethemes.cn/demo/Preciso/products/iphone.png" alt="Product" /></a>
+              <p><a href="#">iPhone 5 16GB Black</a></p>
+              <p class="price"><span>&euro; 1.230</span> &euro; 880</p>
+              <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
+              <input type="button" value="Add to Cart" class="btn" />
+              <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a><span class="sale">Sale</span></div>
           </li>
           
           <!-- Products Single Box -->
           <li class="span3">
-            <div class="thumbnail"><img src="products/folio-4.jpg" tppabs="http://www.sharethemes.cn/demo/Preciso/products/folio-4.jpg" alt="Product" class="folio" />
-              <div class="folio-detail"><a href="products/folio-4.jpg" tppabs="http://www.sharethemes.cn/demo/Preciso/products/folio-4.jpg" class="view-fancybox" rel="tag"><i class="icon-camera"></i></a></div>
-            </div>
+            <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png" tppabs="http://www.sharethemes.cn/demo/Preciso/products/iphone.png" alt="Product" /></a>
+              <p><a href="#">iPhone 5 16GB Black</a></p>
+              <p class="price"><span>&euro; 1.230</span> &euro; 880</p>
+              <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
+              <input type="button" value="Add to Cart" class="btn" />
+              <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a><span class="sale">Sale</span></div>
           </li>
+        </ul>
+      </div>
+      <div class="products-list products-list-simple">
+        <ul class="thumbnails">
+          
+          <!-- Products Single Box -->
+          <li class="span4">
+            <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png" tppabs="http://www.sharethemes.cn/demo/Preciso/products/iphone.png" alt="Product" /></a>
+              <p><a href="#">iPhone 5 16GB Black</a></p>
+              <p class="price">&euro; 574</p>
+              <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star-half-empty"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
+              <input type="button" value="Add to Cart" class="btn" />
+              <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a><span class="new">New</span></div>
+          </li>
+          
+          <!-- Products Single Box -->
+          <li class="span4">
+            <div class="thumbnail"><a href="#" class="thumb"><img src="products/ipad.png" tppabs="http://www.sharethemes.cn/demo/Preciso/products/ipad.png" alt="Product" /></a>
+              <p><a href="#">iPad 2 16GB White</a></p>
+              <p class="price">&euro; 308</p>
+              <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
+              <input type="button" value="Add to Cart" class="btn" />
+              <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a></div>
+          </li>
+          
+          <!-- Products Single Box -->
+          <li class="span4">
+            <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png" tppabs="http://www.sharethemes.cn/demo/Preciso/products/iphone.png" alt="Product" /></a>
+              <p><a href="#">iPhone 5 16GB Black</a></p>
+              <p class="price"><span>&euro; 1.230</span> &euro; 880</p>
+              <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
+              <input type="button" value="Add to Cart" class="btn" />
+              <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a><span class="sale">Sale</span></div>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Pagination -->
+      <div class="pagination pagination-right">
+        <ul>
+          <li><a href="#"><i class="icon-angle-left"></i></a></li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#"><i class="icon-angle-right"></i></a></li>
         </ul>
       </div>
     </div>
@@ -354,7 +356,7 @@
       <!-- Footer Social -->
       <div class="span3">
         <h5><i class="icon-rss"></i>Keep in touch</h5>
-        <div class="footer-social"> <a href="#" class="icon-facebook"></a> <a href="#" class="icon-twitter"></a> <a href="#" class="icon-google-plus"></a> <a href="#" class="icon-pinterest"></a> <a href="#" class="icon-linkedin"></a></div>
+        <div class="footer-social"> <a href="#" class="icon-facebook"></a> <a href="#" class="icon-twitter"></a> <a href="#" class="icon-google-plus"></a> <a href="#" class="icon-pinterest"></a> <a href="#" class="icon-linkedin"></a> </div>
       </div>
     </div>
   </div>
