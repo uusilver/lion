@@ -1,22 +1,22 @@
-package com.tmind.lion.dao;
+package com.tmind.lion.dao.inter;
 
 import java.util.List;
 
-import com.tmind.lion.model.Emp;
+import com.tmind.lion.model.MProductModel;
 
-public interface EmpDAO {
+public interface MProductModelDAO {
 	/** 
      * 添加雇员 
      * @param emp 要添加的雇员 
      * @throws Exception 
      */  
-    public void save(Emp emp) throws Exception;  
+    public void save(MProductModel emp) throws Exception;  
     /** 
      * 修改雇员 
      * @param emp 要修改的雇员 
      * @throws Exception 
      */  
-    public void update(Emp emp) throws Exception;  
+    public void update(MProductModel emp) throws Exception;  
     /** 
      * 根据雇员id删除雇员 
      * @param id 要删除雇员的id 
@@ -29,7 +29,7 @@ public interface EmpDAO {
      * @return 此id对应的雇员 
      * @throws Exception 
      */  
-    public Emp findById(int id) throws Exception;  
+    public MProductModel findById(int id) throws Exception;  
     /** 
      * 查询全部雇员 
      * @return 全部雇员的集合 

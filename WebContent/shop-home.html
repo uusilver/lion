@@ -15,6 +15,12 @@
 <link href="css/masonry.css"  rel="stylesheet" type="text/css" />
 <link href="../../../fonts.googleapis.com/css-family=Roboto+Condensed.css"  rel="stylesheet" type="text/css" />
 <link rel="shortcut icon" href="img/favicon.ico" />
+<style type="text/css">
+	*{margin:0;padding:0;list-style: none;}
+	.content{width: 407px;height: 52px;margin: 20px auto;position: relative;}
+	.content img{position: absolute;left: 0;top: 0;cursor: pointer;}
+	.right{width: 50px;height: 50px;position: fixed;right: 0;bottom: 0;background:#333;}
+</style>
 <!-- Scripts -->
 <script type="text/javascript" src="js/jquery-1.9.1.min.js" ></script>
 <script type="text/javascript" src="js/bootstrap.min.js" ></script>
@@ -23,6 +29,7 @@
 <script type="text/javascript" src="js/jquery.fancybox.min.js" ></script>
 <script type="text/javascript" src="js/jquery.masonry.min.js" ></script>
 <script type="text/javascript" src="js/functions.js" ></script>
+<script type="text/javascript" src="js/shopHome.js" ></script>
 </head>
 <body>
 
@@ -42,36 +49,40 @@
       
       <!-- Header Cart -->
       <div class="cart on"><i class="icon-shopping-cart"></i>
-        <p>&euro; 1.250,00 <span>( 3 )</span></p>
+        <p><span id="totalPriceHeader">1.250,00</span> <span id="cartNum">( 3 )</span></p>
         
         <!-- Header Cart Content -->
         <div class="cart-content">
           <div class="mini-cart-info">
             <h3>我的购物车</h3>
-            <ul>
-              <li><a href="#"><img src="products/iphone.png"  alt="Product" /></a>
-                <div class="mini-cart-detail">
-                  <h5><a href="#">iPhone 5 16GB Black</a></h5>
-                  <em>1 item</em>
-                  <p><span>&euro; 1.230</span> &euro; 880</p>
-                </div>
-              </li>
-              <li><a href="#"><img src="products/iphone.png"  alt="Product" /></a>
-                <div class="mini-cart-detail">
-                  <h5><a href="#">iPhone 4s 8GB White</a></h5>
-                  <em>1 item</em>
-                  <p>&euro; 120.00</p>
-                </div>
-              </li>
+            <ul id="shoppingcartwidget">
+            <!-- comment the original shopping cart
+	              <li><a href="#"><img src="products/iphone.png"  alt="Product" /></a>
+	                <div class="mini-cart-detail">
+	                  <h5><a href="#">iPhone 5 16GB Black</a></h5>
+	                  <em>1 item</em>
+	                  <p>880</p>
+	                </div>
+	              </li>
+	              <li><a href="#"><img src="products/iphone.png"  alt="Product" /></a>
+	                <div class="mini-cart-detail">
+	                  <h5><a href="#">iPhone 4s 8GB White</a></h5>
+	                  <em>1 item</em>
+	                  <p>120.00</p>
+	                </div>
+	              </li>
+               -->
             </ul>
           </div>
           <div class="mini-cart-total">
-            <ul>
-              <li>Sub-Total <span>&euro; 101.00</span></li>
-              <li>Eco Tax <span>&euro; 2.00</span></li>
-              <li>VAT <span>&euro; 17.68</span></li>
-            </ul>
-            <p class="total">总价 <span>&euro; 120.00</span> 
+	          <!--  comments tax
+	            <ul>
+	              <li>Sub-Total <span>101.00</span></li>
+	              <li>Eco Tax <span>2.00</span></li>
+	              <li>VAT <span>17.68</span></li>
+	            </ul>
+	          -->
+            <p class="total">总价 <span id="totalPriceInCart">120.00</span> 
           </div>
           <div class="checkout"><a href="#" class="btn">查看购物车</a> <a href="#" class="btn btn-checkout">去结账</a></div>
         </div>
@@ -170,12 +181,14 @@
     <div class="span12"> 
       
       <!-- Flex Slider -->
+      <!--  comment for the slider presentation by VL
       <div class="flexslider">
         <ul class="slides">
           <li><a href="#"><img src="banner/slider.jpg"  alt="Slider" /></a></li>
           <li><a href="#"><img src="banner/slider2.jpg"  alt="Slider" /></a></li>
         </ul>
       </div>
+     -->
     </div>
   </div>
 </div>
@@ -189,18 +202,18 @@
       <!-- Products Single Box -->
       <li class="span3">
         <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png"  alt="Product" /></a>
-          <p><a href="#">iPhone 5 16GB Black</a></p>
-          <p class="price">&euro; 574</p>
+          <p><a href="#" class="itemname">iPhone 5 16GB Black</a></p>
+          <p class="price">574</p>
           <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star-half-empty"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
           <input type="button" value="添加购物车" class="btn" />
-          <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a><span class="new">New</span></div>
+          <a href="#" class="add-list"><i class="icon-star"></i>去收藏</a><a href="#" class="add-comp"><i class="icon-tasks"></i>去比价</a><span class="new">新品</span></div>
       </li>
       
       <!-- Products Single Box -->
       <li class="span3">
         <div class="thumbnail"><a href="#" class="thumb"><img src="products/ipad.png"  alt="Product" /></a>
-          <p><a href="#">iPad 2 16GB White</a></p>
-          <p class="price">&euro; 308</p>
+          <p><a href="#" class="itemname">iPad 2 16GB White</a></p>
+          <p class="price">308</p>
           <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
           <input type="button" value="添加购物车" class="btn" />
           <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a></div>
@@ -209,8 +222,8 @@
       <!-- Products Single Box -->
       <li class="span3">
         <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png"  alt="Product" /></a>
-          <p><a href="#">iPhone 5 16GB Black</a></p>
-          <p class="price"><span>&euro; 1.230</span> &euro; 880</p>
+          <p><a href="#" class="itemname">iPhone 5 16GB Black</a></p>
+          <p class="price">880</p>
           <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
           <input type="button" value="添加购物车" class="btn" />
           <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a><span class="sale">Sale</span></div>
@@ -219,8 +232,8 @@
       <!-- Products Single Box -->
       <li class="span3">
         <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png"  alt="Product" /></a>
-          <p><a href="#">iPhone 5 16GB Black</a></p>
-          <p class="price">&euro; 1.340</p>
+          <p><a href="#" class="itemname">iPhone 5 16GB Black</a></p>
+          <p class="price">1.340</p>
           <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
           <input type="button" value="添加购物车" class="btn" />
           <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a></div>
@@ -241,8 +254,8 @@
             <!-- Products Single Box -->
             <li class="span2">
               <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png"  alt="Product" /></a>
-                <p><a href="#">iPhone 5 16GB Black</a></p>
-                <p class="price">&euro; 574</p>
+                <p><a href="#" class="itemname">iPhone 5 16GB Black</a></p>
+                <p class="price">574</p>
                 <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
                 <input type="button" value="添加购物车" class="btn" />
                 <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a><span class="new">New</span></div>
@@ -251,8 +264,8 @@
             <!-- Products Single Box -->
             <li class="span2">
               <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png"  alt="Product" /></a>
-                <p><a href="#">iPad 2 16GB White</a></p>
-                <p class="price">&euro; 308</p>
+                <p><a href="#" class="itemname">iPad 2 16GB White</a></p>
+                <p class="price">308</p>
                 <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
                 <input type="button" value="添加购物车" class="btn" />
                 <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a></div>
@@ -261,8 +274,8 @@
             <!-- Products Single Box -->
             <li class="span2">
               <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png"  alt="Product" /></a>
-                <p><a href="#">iPhone 5 16GB Black</a></p>
-                <p class="price"><span>&euro; 1.230</span> &euro; 880</p>
+                <p><a href="#" class="itemname">iPhone 5 16GB Black</a></p>
+                <p class="price">880</p>
                 <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
                 <input type="button" value="添加购物车" class="btn" />
                 <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a><span class="sale">Sale</span></div>
@@ -271,8 +284,8 @@
             <!-- Products Single Box -->
             <li class="span2">
               <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png"  alt="Product" /></a>
-                <p><a href="#">iPhone 5 16GB Black</a></p>
-                <p class="price"><span>&euro; 1.230</span> &euro; 880</p>
+                <p><a href="#" class="itemname">iPhone 5 16GB Black</a></p>
+                <p class="price">880</p>
                 <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
                 <input type="button" value="添加购物车" class="btn" />
                 <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a><span class="sale">Sale</span></div>
@@ -281,8 +294,8 @@
             <!-- Products Single Box -->
             <li class="span2">
               <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png"  alt="Product" /></a>
-                <p><a href="#">iPad 2 16GB White</a></p>
-                <p class="price">&euro; 308</p>
+                <p><a href="#" class="itemname">iPad 2 16GB White</a></p>
+                <p class="price">308</p>
                 <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
                 <input type="button" value="添加购物车" class="btn" />
                 <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a></div>
@@ -291,8 +304,8 @@
             <!-- Products Single Box -->
             <li class="span2">
               <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png"  alt="Product" /></a>
-                <p><a href="#">iPhone 5 16GB Black</a></p>
-                <p class="price">&euro; 1.340</p>
+                <p><a href="#" class="itemname">iPhone 5 16GB Black</a></p>
+                <p class="price">1.340</p>
                 <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
                 <input type="button" value="添加购物车" class="btn" />
                 <a href="#" class="add-list"><i class="icon-star"></i>Wish List</a><a href="#" class="add-comp"><i class="icon-tasks"></i>Compare</a></div>
@@ -305,7 +318,7 @@
             <!-- Products Single Box -->
             <li class="span2">
               <div class="thumbnail"><a href="#" class="thumb"><img src="products/ipad.png"  alt="Product" /></a>
-                <p><a href="#">iPhone 5 16GB Black</a></p>
+                <p><a href="#" class="itemname">iPhone 5 16GB Black</a></p>
                 <p class="price">&euro; 574</p>
                 <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
                 <input type="button" value="添加购物车" class="btn" />
@@ -315,7 +328,7 @@
             <!-- Products Single Box -->
             <li class="span2">
               <div class="thumbnail"><a href="#" class="thumb"><img src="products/ipad.png"  alt="Product" /></a>
-                <p><a href="#">iPad 2 16GB White</a></p>
+                <p><a href="#" class="itemname">iPad 2 16GB White</a></p>
                 <p class="price">&euro; 308</p>
                 <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
                 <input type="button" value="添加购物车" class="btn" />
@@ -325,7 +338,7 @@
             <!-- Products Single Box -->
             <li class="span2">
               <div class="thumbnail"><a href="#" class="thumb"><img src="products/ipad.png"  alt="Product" /></a>
-                <p><a href="#">iPhone 5 16GB Black</a></p>
+                <p><a href="#" class="itemname">iPhone 5 16GB Black</a></p>
                 <p class="price"><span>&euro; 1.230</span> &euro; 880</p>
                 <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
                 <input type="button" value="添加购物车" class="btn" />
@@ -335,7 +348,7 @@
             <!-- Products Single Box -->
             <li class="span2">
               <div class="thumbnail"><a href="#" class="thumb"><img src="products/ipad.png"  alt="Product" /></a>
-                <p><a href="#">iPhone 5 16GB Black</a></p>
+                <p><a href="#" class="itemname">iPhone 5 16GB Black</a></p>
                 <p class="price"><span>&euro; 1.230</span> &euro; 880</p>
                 <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
                 <input type="button" value="添加购物车" class="btn" />
@@ -345,7 +358,7 @@
             <!-- Products Single Box -->
             <li class="span2">
               <div class="thumbnail"><a href="#" class="thumb"><img src="products/ipad.png"  alt="Product" /></a>
-                <p><a href="#">iPad 2 16GB White</a></p>
+                <p><a href="#" class="itemname">iPad 2 16GB White</a></p>
                 <p class="price">&euro; 308</p>
                 <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
                 <input type="button" value="添加购物车" class="btn" />
@@ -355,7 +368,7 @@
             <!-- Products Single Box -->
             <li class="span2">
               <div class="thumbnail"><a href="#" class="thumb"><img src="products/ipad.png"  alt="Product" /></a>
-                <p><a href="#">iPhone 5 16GB Black</a></p>
+                <p><a href="#" class="itemname">iPhone 5 16GB Black</a></p>
                 <p class="price">&euro; 1.340</p>
                 <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
                 <input type="button" value="添加购物车" class="btn" />
@@ -369,7 +382,7 @@
             <!-- Products Single Box -->
             <li class="span2">
               <div class="thumbnail"><a href="#" class="thumb"><img src="products/ipad.png"  alt="Product" /></a>
-                <p><a href="#">iPhone 5 16GB Black</a></p>
+                <p><a href="#" class="itemname">iPhone 5 16GB Black</a></p>
                 <p class="price">&euro; 574</p>
                 <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
                 <input type="button" value="添加购物车" class="btn" />
@@ -379,7 +392,7 @@
             <!-- Products Single Box -->
             <li class="span2">
               <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png"  alt="Product" /></a>
-                <p><a href="#">iPad 2 16GB White</a></p>
+                <p><a href="#" class="itemname">iPad 2 16GB White</a></p>
                 <p class="price">&euro; 308</p>
                 <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
                 <input type="button" value="添加购物车" class="btn" />
@@ -389,7 +402,7 @@
             <!-- Products Single Box -->
             <li class="span2">
               <div class="thumbnail"><a href="#" class="thumb"><img src="products/ipad.png"  alt="Product" /></a>
-                <p><a href="#">iPhone 5 16GB Black</a></p>
+                <p><a href="#" class="itemname">iPhone 5 16GB Black</a></p>
                 <p class="price"><span>&euro; 1.230</span> &euro; 880</p>
                 <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
                 <input type="button" value="添加购物车" class="btn" />
@@ -399,7 +412,7 @@
             <!-- Products Single Box -->
             <li class="span2">
               <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png"  alt="Product" /></a>
-                <p><a href="#">iPhone 5 16GB Black</a></p>
+                <p><a href="#" class="itemname">iPhone 5 16GB Black</a></p>
                 <p class="price"><span>&euro; 1.230</span> &euro; 880</p>
                 <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
                 <input type="button" value="添加购物车" class="btn" />
@@ -409,7 +422,7 @@
             <!-- Products Single Box -->
             <li class="span2">
               <div class="thumbnail"><a href="#" class="thumb"><img src="products/ipad.png"  alt="Product" /></a>
-                <p><a href="#">iPad 2 16GB White</a></p>
+                <p><a href="#" class="itemname">iPad 2 16GB White</a></p>
                 <p class="price">&euro; 308</p>
                 <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
                 <input type="button" value="添加购物车" class="btn" />
@@ -419,7 +432,7 @@
             <!-- Products Single Box -->
             <li class="span2">
               <div class="thumbnail"><a href="#" class="thumb"><img src="products/iphone.png"  alt="Product" /></a>
-                <p><a href="#">iPhone 5 16GB Black</a></p>
+                <p><a href="#" class="itemname">iPhone 5 16GB Black</a></p>
                 <p class="price">&euro; 1.340</p>
                 <p class="rating"><i class="icon-star"><span>1</span></i><i class="icon-star"><span>2</span></i><i class="icon-star"><span>3</span></i><i class="icon-star"><span>4</span></i><i class="icon-star-empty"><span>5</span></i></p>
                 <input type="button" value="添加购物车" class="btn" />

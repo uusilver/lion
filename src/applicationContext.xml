@@ -13,7 +13,7 @@
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">  
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>  
       	
-	        <property name="url" value="jdbc:mysql://localhost:3306/yyyyf?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>
+	        <property name="url" value="jdbc:mysql://localhost:3306/lion?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>
 	        <property name="username" value="root"/>  
 	        <property name="password" value="1234"/>  
         
@@ -32,7 +32,9 @@
     <bean id="empDAO" class="com.tmind.lion.dao.EmpDAOImpl">  
         <property name="dataSource" ref="dataSource"/>  
     </bean>  
-    
+     <bean id="mProductDAO" class="com.tmind.lion.dao.MProductModelDAOImpl">  
+        <property name="dataSource" ref="dataSource"/>  
+    </bean>  
     
  
 	
