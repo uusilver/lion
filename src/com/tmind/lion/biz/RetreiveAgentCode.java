@@ -29,7 +29,7 @@ public class RetreiveAgentCode extends HttpServlet{
 			        String telno = new String(req.getParameter("telno").getBytes("ISO-8859-1"),"utf-8");
 			        String account = new String(req.getParameter("account").getBytes("ISO-8859-1"),"utf-8");
 			        
-			        //推广码
+			        //鎺ㄥ箍鐮�
 			        String agentCode = null;
 			        //System.out.println(username+":"+telno+":"+account);
 			        Connection conn = null;
@@ -69,12 +69,12 @@ public class RetreiveAgentCode extends HttpServlet{
 	            		resp.sendRedirect("agent_apply_done.html?agentCode="+agentCode);
             		}catch(Exception e){
             			System.out.println(e.getMessage());
-            			//return "系统错误，请稍后再试!";
+            			//return "绯荤粺閿欒锛岃绋嶅悗鍐嶈瘯!";
             		}finally{
             			DBUtils.free(conn, ps, rs);
             		}
             		
             		
-            	}//绑定支付宝或者财付通账号
+            	}//缁戝畾鏀粯瀹濇垨鑰呰储浠橀�璐﹀彿
 
 }
