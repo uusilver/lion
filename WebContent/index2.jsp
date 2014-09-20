@@ -40,6 +40,7 @@ function getjson() {
 	</head>
 
 	<body>
+    Hello index2
 		<a href="hello.do">Hello!</a>
 		<br />
 		<a href="contact.do">Contacts</a>
