@@ -1,18 +1,14 @@
 package com.tmind.lion.utils;
 
-import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Properties;
 
 import javax.sql.DataSource;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
-import org.springframework.jdbc.datasource.DataSourceUtils;
 
 
 public class DBUtils {
@@ -23,10 +19,11 @@ public class DBUtils {
   
     public static Connection getConnection() throws SQLException {  
         //System.out.print(dataSource.getConnection("root","family"));  
-    	ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml"); 
+    	ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext-jdbc.xml"); 
     	DataSource ds = (DataSource)ctx.getBean("dataSource");
         return ds.getConnection();
-    }  
+    }
+
     public static void free(Connection con, Statement st, ResultSet rs) {  
         try {  
             if (rs != null)  

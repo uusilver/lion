@@ -13,7 +13,10 @@
      	   http://www.springframework.org/schema/mvc
            http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
-	<context:component-scan base-package="com.tmind.lion.biz"></context:component-scan>
+	<context:component-scan base-package="com.tmind.lion.biz,
+										  com.tmind.lion.bo,
+										  com.tmind.lion.dao,
+										  com.tmind.lion.model"></context:component-scan>
 	<mvc:annotation-driven />
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
@@ -21,6 +24,11 @@
 			value="org.springframework.web.servlet.view.JstlView"></property>
 		<property name="prefix" value="/"></property>
 		<property name="suffix" value=".html"></property>
+	</bean>
+	
+	<bean id="jdbcTemplate"
+       class="org.springframework.jdbc.core.JdbcTemplate">
+    <constructor-arg ref="dataSource" />
 	</bean>
 	
 </beans>
