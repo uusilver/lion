@@ -59,7 +59,7 @@ public class UserInfoDAO extends JdbcDaoSupport {
         		+ this.REMARKS2+","+ this.REMARKS3 +")"
         		+ "values(?,?,?,?,?,?,?,?,?,?,?,?)";
         
-		Object args[] = {userInfo.getUserName() ,userInfo.getPwd(),userInfo.getRegDate(),
+		Object args[] = {userInfo.getUserName() ,userInfo.getUserPwd(),userInfo.getRegDate(),
 				userInfo.getTel(),userInfo.getEmail(),userInfo.getUserLevel(),
 				userInfo.getUserType(),userInfo.getWillingCartTable(),userInfo.getUserHistoryTable(),
 				userInfo.getRemarks1(),userInfo.getRemarks2(),userInfo.getRemarks3()};

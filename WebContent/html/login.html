@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="../js/jquery-1.9.1.min.js" tppabs="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.json-2.4.min.js"></script>
 <script type="text/javascript">
 
 $(document).ready(function(){
@@ -22,15 +23,18 @@ $(document).ready(function(){
 			$.ajax({
 				type:"POST",
 				contentType:"application/json",
-				data:{userName:userName.val(),userPwd:userPwd.val()},
+				data:$.toJSON({userName:userName.val(),userPwd:userPwd.val()}),
 				url:"/lion/login.do",
 				dataType:"text",
 				async:false,
 				success:function(data){
-					if("false"==data){
-						alert("用户名或密码错误，登录失败！");
-					}else if("true"==data){
-						alert("登录成功，欢迎回来！");
+					var returnValue = $.evalJSON(data);
+					var code = returnValue.returnCode;
+					var msg = returnValue.returnMessage;
+					if("false"==code){
+						alert(msg);
+					}else if("true"==code){
+						alert(msg);
 					}
 				},
 				error:function(data){

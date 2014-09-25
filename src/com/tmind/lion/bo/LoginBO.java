@@ -95,7 +95,7 @@ public class LoginBO
        UserInfo userInfo = userInfoDAO.findUserByNameAndPwd(userName, userPwd);
        if(userInfo == null)
        {
-         return ResultConstants.LOGIN_NAME_AND_PWD_ERROR;
+         return ResultConstants.USER_NOT_EXIST;
        }
        UserLoginToken loginToken = new UserLoginToken();
        //加载登录用户的相关信息到登录令牌

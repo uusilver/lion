@@ -18,7 +18,7 @@ public class UserInfo  implements java.io.Serializable {
     // Fields    
 	 private Integer userId;
      private String userName;
-     private String pwd;
+     private String userPwd;
      private String regDate;
      private String userType;
      private Integer userLevel;
@@ -35,12 +35,12 @@ public class UserInfo  implements java.io.Serializable {
     }
 
 	/** minimal constructor */
-    public UserInfo(Integer userId, String userName, String pwd, Integer userLevel, 
+    public UserInfo(Integer userId, String userName, String userPwd, Integer userLevel, 
     				String userType, String email,String tel,
     				String willingCartTable,String userHistoryTable) {
         this.userId = userId;
         this.userName = userName;
-        this.pwd = pwd;
+        this.userPwd = userPwd;
         this.userLevel = userLevel;
         this.userType = userType;
         this.email = email;
@@ -50,13 +50,13 @@ public class UserInfo  implements java.io.Serializable {
     }
     
     /** full constructor */
-    public UserInfo(Integer userId, String userName, String pwd, Integer userLevel, 
+    public UserInfo(Integer userId, String userName, String userPwd, Integer userLevel, 
 			String userType, String email,String tel,
 			String willingCartTable,String userHistoryTable,String remarks1,
 			String remarks2,String remarks3) {
 		this.userId = userId;
 		this.userName = userName;
-		this.pwd = pwd;
+		this.userPwd = userPwd;
 		this.userLevel = userLevel;
 		this.userType = userType;
 		this.email = email;
@@ -87,12 +87,13 @@ public class UserInfo  implements java.io.Serializable {
 		this.userName = userName;
 	}
 
-	public String getPwd() {
-		return pwd;
+
+	public String getUserPwd() {
+		return userPwd;
 	}
 
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
+	public void setUserPwd(String userPwd) {
+		this.userPwd = userPwd;
 	}
 
 	public String getRegDate() {
