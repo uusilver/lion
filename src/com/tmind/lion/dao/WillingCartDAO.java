@@ -4,19 +4,23 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
+import org.springframework.stereotype.Repository;
 
 import com.tmind.lion.model.UserInfo;
 import com.tmind.lion.model.WillingCart;
 
 /**
- * Data access object (DAO) for domain model class UserInfo.
+ * Data access object (DAO) for domain model class WillingCart.
  * @see com.tmind.lion.dao.WillingCartDAO
- * @author MyEclipse - Hibernate Tools
  */
+@Repository(value="willingCartDAO")
 public class WillingCartDAO extends JdbcDaoSupport {
 
     private static final Log log = LogFactory.getLog(WillingCartDAO.class);
@@ -30,8 +34,10 @@ public class WillingCartDAO extends JdbcDaoSupport {
 	public static final String REMARKS3 = "remarks3";
 	public static final String REMARKS4 = "remarks4";
 
-	protected void initDao() {
-		//do nothing
+
+	@Resource
+	public void setJDTemplate(JdbcTemplate jdbcTemplate) {
+		super.setJdbcTemplate(jdbcTemplate);
 	}
     
 	/**

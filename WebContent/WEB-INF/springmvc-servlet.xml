@@ -43,4 +43,11 @@
     <constructor-arg ref="dataSource" />
 	</bean>
 	
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+	<property name="basenames">
+		<list>
+			<value>WEB-INF/message_zh_CN</value>
+		</list>
+	</property>
+</bean>
 </beans>

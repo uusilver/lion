@@ -18,7 +18,6 @@ import com.tmind.lion.model.UserInfo;
 /**
  * Data access object (DAO) for domain model class UserInfo.
  * @see com.tmind.lion.dao.UserInfoDAO
- * @author MyEclipse - Hibernate Tools
  */
 @Repository(value="userInforDAO")
 public class UserInfoDAO extends JdbcDaoSupport {

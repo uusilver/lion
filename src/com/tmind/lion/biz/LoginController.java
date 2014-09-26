@@ -89,7 +89,7 @@ public class LoginController
         	returnMessage = "登录失败,密码不正确!";
         	break;
         case ResultConstants.USER_NOT_EXIST: //登录失败,用户不存在!
-        	returnMessage = "登录失败,用户不存在,!";
+        	returnMessage = "登录失败,用户不存在!";
         	break;
         default:
           logger.info("resultCode = " + resultCode + " not found!");
