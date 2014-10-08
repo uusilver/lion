@@ -49,7 +49,7 @@ public class LoginBO
    * @return
    * @throws Exception
    */
-  public int login(String userName,String userPwd,HttpServletRequest request) throws Exception
+  public String login(String userName,String userPwd,HttpServletRequest request) throws Exception
   {
 
        //记录登录日志

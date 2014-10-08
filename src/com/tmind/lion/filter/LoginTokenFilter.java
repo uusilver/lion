@@ -70,7 +70,7 @@ public class LoginTokenFilter extends OncePerRequestFilter
 	         ResultInfos resultInfos = new ResultInfos();
 	         resultInfos.setGotoUrl("/index.jsp");
 //	         resultInfos.setIsRedirect(true);
-	         resultInfos.add(new ResultInfo(ResultConstants.NOT_LOGIN_NOT_ACCESS_ROLE,null));
+//	         resultInfos.add(new ResultInfo(ResultConstants.NOT_LOGIN_NOT_ACCESS_ROLE,null));
 	         map.put(RequestNameConstants.RESULTINFOS,resultInfos);
 	         map.put("flag","s");
 	         request.setAttribute(RequestNameConstants.INFORMATION, map);
@@ -86,7 +86,7 @@ public class LoginTokenFilter extends OncePerRequestFilter
 	       {
 	         HashMap map = new HashMap();
 	         ResultInfos resultInfos = new ResultInfos();
-	         resultInfos.add(new ResultInfo(ResultConstants.NOT_ACCESS_ROLE,null));
+//	         resultInfos.add(new ResultInfo(ResultConstants.NOT_ACCESS_ROLE,null));
 	         map.put(RequestNameConstants.RESULTINFOS,resultInfos);
 	         request.setAttribute(RequestNameConstants.INFORMATION, map);
 	         request.getRequestDispatcher("information.jsp").forward(request,response);

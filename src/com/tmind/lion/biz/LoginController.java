@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.tmind.lion.bo.LoginBO;
 import com.tmind.lion.model.UserInfo;
 import com.tmind.lion.result.ResultConstants;
+import com.tmind.lion.utils.MessagesUtils;
 
 
 /**
@@ -33,13 +34,6 @@ public class LoginController
   @Resource
   private LoginBO loginBO;
 
-//  public void afterPropertiesSet() throws Exception
-//  {
-//    if(loginBO == null)
-//      throw new ApplicationContextException("Must set loginBO property on " + getClass());
-//  }
-
-
   @RequestMapping(value="/login",method=RequestMethod.POST)
   public @ResponseBody String login(@RequestBody String parameters,HttpServletRequest request) throws Exception
   {
@@ -47,7 +41,7 @@ public class LoginController
 	  String userPwd = null;
 	  String returnCode = "false";
 	  String returnMessage = "";
-	  Map<String,String> resultMap = new HashMap();
+	  Map<String,String> resultMap = new HashMap<String,String>();
 	  UserInfo userInfo = null;
 	  if(parameters!=null && !"".equals(parameters)){
 		  JSONObject jsonObj = JSONObject.fromObject(parameters);
@@ -56,40 +50,40 @@ public class LoginController
 		  userPwd = userInfo.getUserPwd();
 	  }
 	  
-	  System.out.println("userName:"+userName+" , userPwd:"+userPwd);
+//	  System.out.println("userName:"+userName+" , userPwd:"+userPwd);
 	  
     try
     {
       if(userName==null||"".equals(userName)||userPwd==null||"".equals(userPwd)){
-    	  returnMessage = "用户名或密码为空，请填写正确的用户名和密码后再登录！";
+    	  returnMessage = MessagesUtils.getMessage(request, ResultConstants.EMPEY_USERNAME_OR_PWD, null, null);
     	  resultMap.put("returnCode", returnCode);
     	  resultMap.put("returnMessage", returnMessage);
     	  
     	  JSONObject jsonObject = JSONObject.fromObject(resultMap);  
-    	  System.out.println("return value: "+jsonObject.toString());
+//    	  System.out.println("return value: "+jsonObject.toString());
     	  
     	  return jsonObject.toString();
       }
       
       //调用登录业务逻辑
-      int resultCode = loginBO.login(userName,userPwd,request);
+      String resultCode = loginBO.login(userName,userPwd,request);
       switch(resultCode)
       {
         case ResultConstants.LOGIN_SUECCESS: //登录成功
-        	returnMessage = "登录成功";
+        	returnMessage = MessagesUtils.getMessage(request, ResultConstants.LOGIN_SUECCESS, new Object[]{userName}, null);
         	returnCode = "true";
         	break;
         case ResultConstants.LOGIN_IP_NOT_ACCESS: //登录失败,IP被限制!
-        	returnMessage = "登录失败,IP被限制!";
+        	returnMessage = MessagesUtils.getMessage(request, ResultConstants.LOGIN_IP_NOT_ACCESS, null, null);
         	break;
         case ResultConstants.LOGIN_CHECK_CODE_ERROR: //登录失败,验证码不正确!
-        	returnMessage = "登录失败,验证码不正确!";
+        	returnMessage = MessagesUtils.getMessage(request, ResultConstants.LOGIN_CHECK_CODE_ERROR, null, null);
         	break;
-        case ResultConstants.LOGIN_NAME_AND_PWD_ERROR: //登录失败,登录名和密码不正确!
-        	returnMessage = "登录失败,密码不正确!";
+        case ResultConstants.LOGIN_PWD_ERROR: //登录失败,密码不正确!
+        	returnMessage = MessagesUtils.getMessage(request, ResultConstants.LOGIN_PWD_ERROR, null, null);
         	break;
         case ResultConstants.USER_NOT_EXIST: //登录失败,用户不存在!
-        	returnMessage = "登录失败,用户不存在!";
+        	returnMessage = MessagesUtils.getMessage(request, ResultConstants.USER_NOT_EXIST, new Object[]{userName}, null);
         	break;
         default:
           logger.info("resultCode = " + resultCode + " not found!");
