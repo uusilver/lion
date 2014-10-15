@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.json-2.4.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	var userName = $("#userName");
+	var userPwd = $("#userPwd");
+	$("#loginForm").submit(function(){
+		if(userName.val()==''){
+			alert("请输入您的用户名！");  
+			userName.focus();  
+			return false;
+		}else if(userPwd.val()==''){
+			alert("请输入您的登录密码！");
+			userPwd.focus();
+			return false;
+		}else{
+			$.ajax({
+				type:"POST",
+				contentType:"application/json",
+				data:$.toJSON({userName:userName.val(),userPwd:userPwd.val()}),
+				url:"/lion/login.do",
+				dataType:"text",
+				async:false,
+				success:function(data){
+					var returnValue = $.evalJSON(data);
+					var code = returnValue.returnCode;
+					var msg = returnValue.returnMessage;
+					if("false"==code){
+						alert(msg);
+					}else if("true"==code){
+						alert(msg);
+					}
+				},
+				error:function(data){
+					alert("系统异常,请稍后再试！");
+				}
+			});
+		}
+	});
+});
+</script>
+</head>
+<body>
+	<form id="loginForm" name="loginForm" method="post">
+		<table align="center">
+			<tr>
+				<td>用户名:</td>
+				<td><input id="userName" type="text" size="10"></td>
+			</tr>
+			<tr>
+				<td>密&nbsp;&nbsp;&nbsp;&nbsp;码:</td>
+				<td><input id="userPwd" type="password" size="11"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" id="loginBtn" value="提 交" size="5"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

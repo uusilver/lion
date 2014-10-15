@@ -49,7 +49,7 @@ $(function(){
 	        +'<div class="mini-cart-detail"><h5><a href="#">'+name+'</a></h5>'
 	        +'<em>'+count+' 个</em>'
 	        +'<p>'+price+'</p>'
-	        +'<br/><a id="removebutton" class="removedbutton">删除</a>'
+	        +'<div style="text-align:right"><a id="removebutton" class="icon-remove"></a></div>'
 	        +'</div>'
 	        +'</li>';
 		//add to cart container
@@ -64,7 +64,7 @@ $(function(){
 //bind remove cart item function
 $(document).on('click', '#removebutton', function() {
     //function code here.
-	$(this).parent().parent().remove();
+	$(this).parent().parent().parent().remove();
 	var delName = $(this).parent().parent().find(".itemname").html();
 	var cartContainerLength = cartContainer.length;
 	var delIndex = 0;

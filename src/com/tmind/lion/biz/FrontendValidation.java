@@ -17,7 +17,7 @@ import com.tmind.lion.utils.DBUtils;
 @Controller
 public class FrontendValidation {
 
-	@RequestMapping(value="/checkAgentCode/{telno}", method=RequestMethod.GET)
+	@RequestMapping(value="/checkAgentCode/{telno}", method=RequestMethod.GET,produces="application/json")
 	public @ResponseBody int checkTelno4AgentCode(@PathVariable("telno")String telno){
 		Connection conn = null;
  		PreparedStatement ps = null;

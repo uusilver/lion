@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="baseJdbcDAO" class="com.tmind.lion.dao.BaseJdbcDAO" lazy-init="true">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<!-- framework transcation beans -->
+	<bean id="jdbcTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- DAO -->
+	<!-- bean id="empDAO" class="com.tmind.lion.dao.EmpDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean> -->
+	
+	<bean id="mProductDAO" class="com.tmind.lion.dao.MProductModelDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+</beans>
